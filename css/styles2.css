@@ -1,0 +1,29 @@
+.canvas {
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+  }
+
+  #mapsection,
+    body,
+    html {
+    height: 100%;
+    padding-top: 0%;
+  }
+
+  #map{
+    height: 80%;
+    margin-left: 15%;
+    margin-right: 15%;
+  }
+
+
+  .vertical-text {
+	transform: rotate(90deg);
+	transform-origin: left top 0;
+  }
+
+  #canvas1{
+    width: 50%;
+    height: 50%;
+  }
