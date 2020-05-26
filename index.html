@@ -26,12 +26,15 @@
         <link href="css/styles2.css" rel="stylesheet" />
 
         <!-- ###################################################-->
-
-
-
-
-
+        <!-- Leaflet Map -->
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
+        integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+        crossorigin=""/>
+        <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
+        integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
+        crossorigin=""></script>
     </head>
+
     <body id="page-top">
         <!-- Navigation-->
         <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
@@ -40,17 +43,26 @@
                 </a><button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">Menu<i class="fas fa-bars ml-1"></i></button>
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav text-uppercase ml-auto">
-                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#services">Mission</a></li>
-                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#about">Timeline</a></li>
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#mission">Mission</a></li>
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#timeline">Timeline</a></li>
 
                         <!-- NEED TO CREATE THESE SECTIONS -->
-                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#map">Map</a></li>
-                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#dashboards">DashBoards</a></li>
-
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#mapsection">Map</a></li>
+                        <!-- original -->
+                        <!-- <li class="nav-item dropdown"><a class="nav-link js-scroll-trigger" href="#dashboards">DashBoards</a></li> -->
+                        <!--  -->
+                        <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">DashBoards</a>
+                                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="categories.html">Categories Analysis</a>
+                                <a class="dropdown-item" href="plot1-1.html">Tweets vs Average Followers</a>
+                                <a class="dropdown-item" href="plot2-2.html">Tweets vs Average Retweets</a>
+                                <a class="dropdown-item" href="plot3-3.html">Tweets vs Total Reviews</a>
+                                <a class="dropdown-item" href="plot4-4.html">Tweets vs Ratings</a>
+                        </li>
 
                         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#portfolio">Insights</a></li>
                         
-                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#team">About</a></li>
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#about">About</a></li>
                         <!-- <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#contact">Contact</a></li> -->
                     </ul>
                 </div>
@@ -61,11 +73,11 @@
             <div class="container">
                 <!-- <div class="masthead-subheading">Welcome To Our Studio!</div> -->
                 <div class="masthead-heading text-uppercase">WELCOME EVERYONE!</div>
-                <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="#services">Start</a>
+                <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="#mission">Start</a>
             </div>
         </header>
-        <!-- Services-->
-        <section class="page-section" id="services">
+        <!-- mission-->
+        <section class="page-section" id="mission">
             <div class="container">
                 <div class="text-center">
                     <h3 class="section-heading text-uppercase">ASSOCATION OF SOUTH EAST ASIAN NATIONS</h3>
@@ -100,8 +112,8 @@
             </div>
         </section>
        
-        <!-- About-->
-        <section class="page-section bg-light" id="about">
+        <!-- Timeline-->
+        <section class="page-section bg-light" id="timeline">
             <div class="container">
                 <div class="text-center">
                     <h2 class="section-heading text-uppercase">Timeline</h2>
@@ -168,11 +180,19 @@
             </div>
         </section>
 
+        <!-- MAP SECTION -->
+        <section class="page-section" id="mapsection">
+            <div class="container">
+                <div class="text-center">
+                    <h2 class="section-heading text-uppercase">Map</h2>
+                </div>
+                <div id="mapid"></div>
+        </section>
 
 
          <!-- INSIGHTS / former Portfolio Grid-->
          <!-- #############################################-->
-         <section class="page-section" id="portfolio">
+         <section class="page-section bg-light" id="portfolio">
             <div class="container">
                 <div class="text-center">
                     <h2 class="section-heading text-uppercase">Insights</h2>
@@ -276,7 +296,7 @@
         <!-- ABOUT THE CREATOR / FORMERLY TEAM-->
         <!-- #############################################-->
 
-        <section class="page-section bg-light" id="team">
+        <section class="page-section" id="about">
             
             <div class="container">
                 <div class="row">
@@ -412,7 +432,7 @@
         </section> -->
         <!-- Footer-->
         <footer class="page-footer font-small blue pt-4">
-            <div class="footer-copyright text-center py-3"><gl-emoji title="copyright sign" data-name="copyright" data-unicode-version="1.1">©</gl-emoji> 2019 Copyright:
+            <div class="footer-copyright text-center py-3 bg-light"><gl-emoji title="copyright sign" data-name="copyright" data-unicode-version="1.1">©</gl-emoji> 2020 Copyright:
                 <a title="Designed By Johneson Giang" href="#" target="_blank"> Johneson Giang</a>
             </div>
         </footer>
@@ -430,7 +450,7 @@
                 </div>
             </div>
         </footer> -->
-        <!-- Portfolio Modals--><!-- Modal 1-->
+<!-- Portfolio Modals--><!-- Modal 1-->
         <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
@@ -602,5 +622,9 @@
         <script src="assets/mail/contact_me.js"></script>
         <!-- Core theme JS-->
         <script src="js/scripts.js"></script>
+
+          <!-- MapBox API Key -->
+        <script type="text/javascript" src="js/config.js"></script>
+        <script src="js/maplogic.js"></script>
     </body>
 </html>
