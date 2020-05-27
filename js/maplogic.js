@@ -1,4 +1,4 @@
-var countries = [
+const countries = [
     {
       name: "Brunei Darussalam",
       currency: "B$ (Brunei Dollar)",
@@ -140,6 +140,8 @@ var countries = [
       laborpop_educated: "87%"
     }
 ];
+
+
 var mymap = L.map('mapid').setView([4.94029, 114.94806], 4);
 
 
@@ -152,3 +154,30 @@ L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_toke
     zoomOffset: -1,
     accessToken: API_KEY
 }).addTo(mymap);
+
+
+const countryBorderColors = [
+    '#FFEB4A',
+    '#E866CB',
+    '#7DFFE7',
+    '#EBC769',
+    '#B729FF'
+];
+
+const asean_geojson = [
+    brunei,
+    cambodia,
+    indonesia,
+    lao,
+    myanmar,
+    malaysia,
+    philippines,
+    singapore,
+    thailand,
+    vietnam
+];
+
+for (let i = 0; i < countries.length; i++) {
+  //test for color - working original above
+  L.geoJSON(asean_geojson[i], {style: function (feature) {return {color: feature.properties.color}}}).bindPopup("<h2>" + countries[i].name +"</h2>"+"<hr>"+"<h5>Capital: " + (countries[i].capital) +"<h5>Head of State: " + (countries[i].leader) + "</h5>" +"<h5>GDP (Current US$B): " + (countries[i].gdp_curr_yr/1000000000) + "</h5>" + "</h5>"+"<h4>Population (MM): " + (countries[i].population/1000000) + "</h5>"+"<h5>Labor Population Educated: " + (countries[i].laborpop_educated) + "</h5>").addTo(myMap);
+};

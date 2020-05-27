@@ -1,4 +1,4 @@
-let singapore =
+const singapore =
 {
 "type": "FeatureCollection",
 "features": [

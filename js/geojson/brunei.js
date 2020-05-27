@@ -1,4 +1,4 @@
-let brunei =
+const brunei =
 {
 "type": "FeatureCollection",
 "features": [

@@ -1,4 +1,4 @@
-let lao =
+const lao =
 {
 "type": "FeatureCollection",
 "features": [

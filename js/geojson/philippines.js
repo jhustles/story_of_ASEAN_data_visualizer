@@ -1,4 +1,4 @@
-let philippines =
+const philippines =
 {
 "type": "FeatureCollection",
 "features": [

@@ -1,4 +1,4 @@
-let thailand = 
+const thailand = 
 {
 "type": "FeatureCollection",
 "features": [
