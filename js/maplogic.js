@@ -165,24 +165,41 @@ var asean_geojson = [
 ];
 
 
-
 // Create initial map object
 // var myMap = L.map('mapid').setView([4.94029, 114.94806], 4);
 // coodinates of South China Sea
-var myMap = L.map('mapid').setView([8.488092, 114.404754], 4);
+// var myMap = L.map('mapid').setView([8.488092, 114.404754], 4);
 
 // add a tile layer
 var dark = L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
     attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
     minZoom: 3.5,
-    maxZoom: 15,
+    maxZoom: 7,
     id: 'mapbox/dark-v10',
     // id: "mapbox.streets",
     // id: 'mapbox/light-v10',
     tileSize: 500,
     zoomOffset: -1,
     accessToken: API_KEY
-}).addTo(myMap);
+});
+// .addTo(myMap);
+
+var light = L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
+    attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+    minZoom: 3.5,
+    maxZoom: 15,
+    // id: 'mapbox/dark-v10',
+    // id: "mapbox.streets",
+    id: 'mapbox/light-v10',
+    tileSize: 500,
+    zoomOffset: -1,
+    accessToken: API_KEY
+});
+
+var baseMaps = {
+  Light: light,
+  Dark: dark
+};
 
 // Create a marker and pass in some initial options and add it to the map using addTo
 
@@ -215,41 +232,77 @@ for (i=0; i < countries.length; i++){
   // let marker = L.marker(aseanCapitalsCoordinates[i], {icon: myIcon}).addTo(myMap);
 
 
+  // let marker = L.marker(aseanCapitalsCoordinates[i], {icon: myIcon}).bindPopup(
+  //   "<h4>" + countries[i].name +"</h4>"+"<hr>"
+  //   +"<h6>Capital: " + (countries[i].capital)+"</h6>"
+  //   +"<h6>Head of State: " + (countries[i].leader) +"</h6>"
+  //   +"<h6>GDP (Current US$B): " + (countries[i].gdp_curr_yr/1000000000)+"</h6>"
+  //   +"<h6>Population (MM): " + (countries[i].population/1000000)+"</h6>"
+  //   ).addTo(myMap);
+
   let marker = L.marker(aseanCapitalsCoordinates[i], {icon: myIcon}).bindPopup(
     "<h4>" + countries[i].name +"</h4>"+"<hr>"
     +"<h6>Capital: " + (countries[i].capital)+"</h6>"
     +"<h6>Head of State: " + (countries[i].leader) +"</h6>"
     +"<h6>GDP (Current US$B): " + (countries[i].gdp_curr_yr/1000000000)+"</h6>"
     +"<h6>Population (MM): " + (countries[i].population/1000000)+"</h6>"
-    ).addTo(myMap);
+    );
+    aseanFlagIcons.push(marker)
+
 };
 
+var flagIconLayer = L.layerGroup(aseanFlagIcons);
 
 
 
+// for (let i = 0; i < countries.length; i++) {
+
+// L.geoJSON(asean_geojson[i], {
+//   style: function (features) {
+//     return {color: features.properties.color}
+//   }}).bindPopup(
+//     "<h4>" + countries[i].name +"</h4>"+"<hr>"
+//     +"<h6>Capital: " + (countries[i].capital)+"</h6>"
+//     +"<h6>Head of State: " + (countries[i].leader) +"</h6>"
+//     +"<h6>GDP (Current US$B): " + (countries[i].gdp_curr_yr/1000000000)+"</h6>"
+//     +"<h6>Population (MM): " + (countries[i].population/1000000)+"</h6>"
+//     ).addTo(myMap);
+// };
+
+let countryOutlines = [];
 for (let i = 0; i < countries.length; i++) {
 
-L.geoJSON(asean_geojson[i], {
-  style: function (features) {
-    return {color: features.properties.color}
-  }}).bindPopup(
-    "<h4>" + countries[i].name +"</h4>"+"<hr>"
-    +"<h6>Capital: " + (countries[i].capital)+"</h6>"
-    +"<h6>Head of State: " + (countries[i].leader) +"</h6>"
-    +"<h6>GDP (Current US$B): " + (countries[i].gdp_curr_yr/1000000000)+"</h6>"
-    +"<h6>Population (MM): " + (countries[i].population/1000000)+"</h6>"
-    ).addTo(myMap);
+  let outline = L.geoJSON(asean_geojson[i], {
+    style: function (features) {
+      return {color: features.properties.color}
+    }}).bindPopup(
+      "<h4>" + countries[i].name +"</h4>"+"<hr>"
+      +"<h6>Capital: " + (countries[i].capital)+"</h6>"
+      +"<h6>Head of State: " + (countries[i].leader) +"</h6>"
+      +"<h6>GDP (Current US$B): " + (countries[i].gdp_curr_yr/1000000000)+"</h6>"
+      +"<h6>Population (MM): " + (countries[i].population/1000000)+"</h6>"
+      );
+      countryOutlines.push(outline);
+  };
 
-    // L.geoJSON(asean_geojson[i], {
-    //   style: function (features) {
-    //     return {color: features.properties.color}
-    //   }}).bindPopup(
-    //     `<h5> ${countries[i].name} ${countries[i].name}</h5> `
-    //     "<h4>" + countries[i].name +"</h4>"+"<hr>"
-    //     +"<h6>Capital: " + (countries[i].capital)+"</h6>"
-    //     +"<h6>Head of State: " + (countries[i].leader) +"</h6>"
-    //     +"<h6>GDP (Current US$B): " + (countries[i].gdp_curr_yr/1000000000)+"</h6>"
-    //     +"<h6>Population (MM): " + (countries[i].population/1000000)+"</h6>"
-    //     ).addTo(myMap);
-    // };
+var countryOutlineLayer = L.layerGroup(countryOutlines);
+
+var overlayMaps = {
+  Countries: countryOutlineLayer,
+  Flags: flagIconLayer
 };
+
+var controlSetup = {
+  position : 'bottomleft'
+};
+
+
+
+var myMap = L.map('mapid', {
+  layers: [dark, countryOutlineLayer, flagIconLayer]
+}).setView([8.488092, 114.404754], 4);
+
+L.control.layers(baseMaps, overlayMaps, controlSetup
+).addTo(myMap);
+
+L.control.scale().addTo(myMap);
