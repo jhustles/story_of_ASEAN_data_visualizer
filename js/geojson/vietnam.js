@@ -1,10 +1,11 @@
-const vietnam = 
+var vietnam = 
 {
     "type": "FeatureCollection",
         "features": [
             {
                 "type": "Feature",
                 "properties": {
+                    color: "yellow",
                     "cca2": "vn"
                 },
                 "geometry": {

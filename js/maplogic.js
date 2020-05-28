@@ -1,4 +1,4 @@
-const countries = [
+var countries = [
     {
       name: "Brunei Darussalam",
       currency: "B$ (Brunei Dollar)",
@@ -11,7 +11,8 @@ const countries = [
       pop_female: "49%",
       urban_pop: "77%",
       rural_pop: "23%",
-      laborpop_educated: "82%"
+      laborpop_educated: "82%",
+      flag: 'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.I76xY3xLF41YA2XDUKAecgHaEK%26pid%3DApi&f=1'
     },
     {
       name: "Cambodia",
@@ -25,7 +26,8 @@ const countries = [
       pop_female: "51%",
       urban_pop: "23%",
       rural_pop: "77%",
-      laborpop_educated: "79%"
+      laborpop_educated: "79%",
+      flag: 'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.1OuUPzJaPJ8xcvv1Y7zBKgHaE8%26pid%3DApi&f=1'
     },
     {
       name: "Indonesia",
@@ -39,7 +41,8 @@ const countries = [
       pop_female: "50%",
       urban_pop: "55%",
       rural_pop: "45%",
-      laborpop_educated: "85%"
+      laborpop_educated: "85%",
+      flag: 'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse3.mm.bing.net%2Fth%3Fid%3DOIP.CZP04Jzt3DbVwumf_yzcuAHaE8%26pid%3DApi&f=1'
     },
     {
       name: "Lao PDR",
@@ -53,21 +56,8 @@ const countries = [
       pop_female: "50%",
       urban_pop: "35%",
       rural_pop: "65%",
-      laborpop_educated: "75%"
-    },
-    {
-      name: "Malaysia",
-      currency: "Ringgit",
-      location: [3.140853, 101.693207],
-      capital: "Kuala Lumpur",
-      leader: "His Majesty Seri Paduka Baginda Yang di-Pertuan Agong XV Sultan Muhammad V",
-      gdp_curr_yr: 315000000000,
-      population: 31624264,
-      pop_male: "52%",
-      pop_female: "48%",
-      urban_pop: "25%",
-      rural_pop: "75%",
-      laborpop_educated: "69%"
+      laborpop_educated: "75%",
+      flag: 'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse2.mm.bing.net%2Fth%3Fid%3DOIP.TSljz-YeQkWz4FZNnZGaRQHaEK%26pid%3DApi&f=1'
     },
     {
       name: "Myanmar",
@@ -81,7 +71,23 @@ const countries = [
       pop_female: "na",
       urban_pop: "37%",
       rural_pop: "63%",
-      laborpop_educated: "na"
+      laborpop_educated: "na",
+      flag: 'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.XIuJZ4k9Fm0QTLDUCtrZaQHaFQ%26pid%3DApi&f=1'
+    },
+    {
+      name: "Malaysia",
+      currency: "Ringgit",
+      location: [3.140853, 101.693207],
+      capital: "Kuala Lumpur",
+      leader: "His Majesty Seri Paduka Baginda Yang di-Pertuan Agong XV Sultan Muhammad V",
+      gdp_curr_yr: 315000000000,
+      population: 31624264,
+      pop_male: "52%",
+      pop_female: "48%",
+      urban_pop: "25%",
+      rural_pop: "75%",
+      laborpop_educated: "69%",
+      flag: 'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse3.mm.bing.net%2Fth%3Fid%3DOIP.BmUmUuFvlgxZfKik1mhghQHaEK%26pid%3DApi&f=1'
     },
     {
       name: "Philippines",
@@ -95,7 +101,8 @@ const countries = [
       pop_female: "50%",
       urban_pop: "47%",
       rural_pop: "53%",
-      laborpop_educated: "63%"
+      laborpop_educated: "63%",
+      flag: 'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP._-olKkfY2vR6DMp6xrpaUwHaEo%26pid%3DApi&f=1'
     },
     {
       name: "Singapore",
@@ -109,7 +116,8 @@ const countries = [
       pop_female: "51%",
       urban_pop: "100%",
       rural_pop: "0",
-      laborpop_educated: "100%"
+      laborpop_educated: "100%",
+      flag: 'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.cciiwjnDvl687Q7mnhnGcgHaEo%26pid%3DApi&f=1'
     },
     {
       name: "Thailand",
@@ -123,7 +131,8 @@ const countries = [
       pop_female: "51%",
       urban_pop: "49%",
       rural_pop: "51%",
-      laborpop_educated: "84%"
+      laborpop_educated: "84%",
+      flag: 'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse2.mm.bing.net%2Fth%3Fid%3DOIP.EYT0vGeX8kvtrg6igLUyKwHaE7%26pid%3DApi&f=1'
     },
     {
       name: "Vietnam",
@@ -137,47 +146,110 @@ const countries = [
       pop_female: "51%",
       urban_pop: "35%",
       rural_pop: "65%",
-      laborpop_educated: "87%"
+      laborpop_educated: "87%",
+      flag: 'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fcensorshipinamerica.files.wordpress.com%2F2013%2F02%2Fvietnam-flag.jpg&f=1&nofb=1'
     }
 ];
 
+var asean_geojson = [
+  brunei,
+  cambodia,
+  indonesia,
+  lao,
+  myanmar,
+  malaysia,
+  philippines,
+  singapore,
+  thailand,
+  vietnam
+];
 
-var mymap = L.map('mapid').setView([4.94029, 114.94806], 4);
 
 
-L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
+// Create initial map object
+// var myMap = L.map('mapid').setView([4.94029, 114.94806], 4);
+// coodinates of South China Sea
+var myMap = L.map('mapid').setView([8.488092, 114.404754], 4);
+
+// add a tile layer
+var dark = L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
     attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
-    maxZoom: 12,
+    minZoom: 3.5,
+    maxZoom: 15,
     id: 'mapbox/dark-v10',
+    // id: "mapbox.streets",
     // id: 'mapbox/light-v10',
-    tileSize: 512,
+    tileSize: 500,
     zoomOffset: -1,
     accessToken: API_KEY
-}).addTo(mymap);
+}).addTo(myMap);
+
+// Create a marker and pass in some initial options and add it to the map using addTo
+
+let aseanCountries = [];
+let aseanCapitals = [];
+let aseanCapitalsCoordinates = [];
+let aseanFlags = [];
+let aseanFlagIcons = [];
+
+for (i=0; i < countries.length; i++){
+  aseanCountries.push(countries[i]['name']);
+  aseanCapitals.push(countries[i]['capital']);
+  aseanCapitalsCoordinates.push(countries[i]['location']);
+  aseanFlags.push(countries[i]['flag']);
+  // let marker = L.marker(aseanCapitalsCoordinates[i], {
+  //   draggable: false,
+  //   title: aseanCapitals[i]
+  // }).addTo(myMap);
+  // marker.bindPopup(`${aseanCapitals[i]}, ${aseanCountries[i]}`);
+
+  var myIcon = L.icon({
+    iconUrl: aseanFlags[i],
+    iconSize: [25, 25],
+    iconAnchor: [9, 24],
+    popupAnchor: [9, 24],
+    // shadowUrl: '',
+    // shadowSize: [68, 95],
+    // shadowAnchor: [22, 94]
+  });
+  // let marker = L.marker(aseanCapitalsCoordinates[i], {icon: myIcon}).addTo(myMap);
 
 
-const countryBorderColors = [
-    '#FFEB4A',
-    '#E866CB',
-    '#7DFFE7',
-    '#EBC769',
-    '#B729FF'
-];
+  let marker = L.marker(aseanCapitalsCoordinates[i], {icon: myIcon}).bindPopup(
+    "<h4>" + countries[i].name +"</h4>"+"<hr>"
+    +"<h6>Capital: " + (countries[i].capital)+"</h6>"
+    +"<h6>Head of State: " + (countries[i].leader) +"</h6>"
+    +"<h6>GDP (Current US$B): " + (countries[i].gdp_curr_yr/1000000000)+"</h6>"
+    +"<h6>Population (MM): " + (countries[i].population/1000000)+"</h6>"
+    ).addTo(myMap);
+};
 
-const asean_geojson = [
-    brunei,
-    cambodia,
-    indonesia,
-    lao,
-    myanmar,
-    malaysia,
-    philippines,
-    singapore,
-    thailand,
-    vietnam
-];
+
+
 
 for (let i = 0; i < countries.length; i++) {
-  //test for color - working original above
-  L.geoJSON(asean_geojson[i], {style: function (feature) {return {color: feature.properties.color}}}).bindPopup("<h2>" + countries[i].name +"</h2>"+"<hr>"+"<h5>Capital: " + (countries[i].capital) +"<h5>Head of State: " + (countries[i].leader) + "</h5>" +"<h5>GDP (Current US$B): " + (countries[i].gdp_curr_yr/1000000000) + "</h5>" + "</h5>"+"<h4>Population (MM): " + (countries[i].population/1000000) + "</h5>"+"<h5>Labor Population Educated: " + (countries[i].laborpop_educated) + "</h5>").addTo(myMap);
+
+L.geoJSON(asean_geojson[i], {
+  style: function (features) {
+    return {color: features.properties.color}
+  }}).bindPopup(
+    "<h4>" + countries[i].name +"</h4>"+"<hr>"
+    +"<h6>Capital: " + (countries[i].capital)+"</h6>"
+    +"<h6>Head of State: " + (countries[i].leader) +"</h6>"
+    +"<h6>GDP (Current US$B): " + (countries[i].gdp_curr_yr/1000000000)+"</h6>"
+    +"<h6>Population (MM): " + (countries[i].population/1000000)+"</h6>"
+    ).addTo(myMap);
+
+    // L.geoJSON(asean_geojson[i], {
+    //   style: function (features) {
+    //     return {color: features.properties.color}
+    //   }}).bindPopup(
+    //     `<h5> ${countries[i].name} ${countries[i].name}</h5> `
+    //     "<h4>" + countries[i].name +"</h4>"+"<hr>"
+    //     +"<h6>Capital: " + (countries[i].capital)+"</h6>"
+    //     +"<h6>Head of State: " + (countries[i].leader) +"</h6>"
+    //     +"<h6>GDP (Current US$B): " + (countries[i].gdp_curr_yr/1000000000)+"</h6>"
+    //     +"<h6>Population (MM): " + (countries[i].population/1000000)+"</h6>"
+    //     ).addTo(myMap);
+    // };
 };

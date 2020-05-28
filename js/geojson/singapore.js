@@ -1,10 +1,11 @@
-const singapore =
+var singapore =
 {
 "type": "FeatureCollection",
 "features": [
 {
 "type": "Feature",
 "properties": {
+color: "red",
 "cca2": "sg"
 },
 "geometry": {

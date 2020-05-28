@@ -1,10 +1,11 @@
-const brunei =
+var brunei =
 {
 "type": "FeatureCollection",
 "features": [
 {
 "type": "Feature",
 "properties": {
+color: "red",
 "cca2": "bn"
 },
 "geometry": {

@@ -1,10 +1,11 @@
-const indonesia =
+var indonesia =
 {
 "type": "FeatureCollection",
 "features": [
 {
 "type": "Feature",
 "properties": {
+color: "rgb(223, 79, 255)",
 "cca2": "id"
 },
 "geometry": {

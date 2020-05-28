@@ -1,10 +1,11 @@
-const lao =
+var lao =
 {
 "type": "FeatureCollection",
 "features": [
 {
 "type": "Feature",
 "properties": {
+color: "red",
 "cca2": "la"
 },
 "geometry": {
