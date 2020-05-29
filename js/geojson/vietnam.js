@@ -6,6 +6,7 @@ var vietnam =
                 "type": "Feature",
                 "properties": {
                     color: "yellow",
+                    // population: 95540800,
                     "cca2": "vn"
                 },
                 "geometry": {

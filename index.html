@@ -57,7 +57,7 @@
                         <!--  -->
                         <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">DashBoards</a>
                                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="categories.html">Categories Analysis</a>
+                                <a class="dropdown-item" href="#dashboardSection">Categories Analysis</a>
                                 <a class="dropdown-item" href="plot1-1.html">Tweets vs Average Followers</a>
                                 <a class="dropdown-item" href="plot2-2.html">Tweets vs Average Retweets</a>
                                 <a class="dropdown-item" href="plot3-3.html">Tweets vs Total Reviews</a>
@@ -192,6 +192,17 @@
                 </div>
                 <div id="mapid"></div>
         </section>
+
+        <!-- DASHBOARD SECTION -->
+        <section class="page-section bg-light" id="dashboardSection">
+            <div class="container">
+                <div class="text-center">
+                    <h2 class="section-heading text-uppercase">DASHBOARDS</h2>
+                </div>
+                <div id="trends"></div>
+        </section>
+
+
 
 
          <!-- INSIGHTS / former Portfolio Grid-->
@@ -629,7 +640,8 @@
 
 
         <!-- ASEAN Geo.json scripts total: 10 items-->
-        <script type="text/javascript" src="js/geojson/vietnam.js"></script>
+        <script type="text/javascript" src="js/geojson/aseanCountries.js"></script>
+        <!-- <script type="text/javascript" src="js/geojson/vietnam.js"></script>
         <script type="text/javascript" src="js/geojson/thailand.js"></script>
         <script type="text/javascript" src="js/geojson/singapore.js"></script>
         <script type="text/javascript" src="js/geojson/philippines.js"></script>
@@ -638,11 +650,14 @@
         <script type="text/javascript" src="js/geojson/lao.js"></script>
         <script type="text/javascript" src="js/geojson/indonesia.js"></script>
         <script type="text/javascript" src="js/geojson/cambodia.js"></script>
-        <script type="text/javascript" src="js/geojson/brunei.js"></script>
+        <script type="text/javascript" src="js/geojson/brunei.js"></script> -->
+        <script type="text/javascript" src="js/geojson/aseanCountriesSummary.js"></script>
+
 
           <!-- MapBox API Key -->
         <script type="text/javascript" src="js/config.js"></script>
-        <script src="js/maplogic.js"></script>
+        <!-- <script src="js/maplogic.js"></script> -->
+        <script src="js/geojson/mlogic.js"></script>
 
     </body>
 </html>

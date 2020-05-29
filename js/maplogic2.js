@@ -317,7 +317,7 @@ function highlightFeature(e) {
   };
 
   // added info. update for div update box
-  info.update(layer.feature.properties);
+  info.update(layer.feature.properties.population);
 }
 
 // on mouse out do this
@@ -339,43 +339,15 @@ function onEachFeature(feature, layer) {
   });
 }
 
-// var geojson;
-//   ///
-// let heatMap = [];
-// for (let i = 0; i < countries.length; i++) {
-//   // before was hmOutline we changed to geojson
-//   geojson = L.geoJSON(asean_geojson[i], {
-//     style: function (feature) {
-//       return {
-//           fillColor: getColor(feature.properties.population),
-//           weight: 2,
-//           opacity: 1,
-//           color: 'white',
-//           dashArray: '3',
-//           fillOpacity: 0.7
-//       },
-//       function onEachFeature(feature, layer) {
-//         layer.on({
-//             mouseover: highlightFeature,
-//             mouseout: resetHighlight,
-//             click: zoomToFeature
-//         });
-//       }
-
-
-//     },
-//     onEachFeature: onEachFeature
-//   });
-//     heatMap.push(geojson);
-//     };
-
 var geojson;
   ///
-
-  geojson = L.geoJSON(aseanData, {
+let heatMap = [];
+for (let i = 0; i < countries.length; i++) {
+  // before was hmOutline we changed to geojson
+  geojson = L.geoJSON(asean_geojson[i], {
     style: function (feature) {
       return {
-          fillColor: getColor(feature.properties.density),
+          fillColor: getColor(feature.properties.population),
           weight: 2,
           opacity: 1,
           color: 'white',
@@ -394,12 +366,9 @@ var geojson;
     },
     onEachFeature: onEachFeature
   });
-    // heatMap.push(geojson);
-    
-
-
-
-var populationLayer = L.layerGroup(geojson);
+    heatMap.push(geojson);
+    };
+var populationLayer = L.layerGroup(heatMap);
 
 
 
@@ -427,8 +396,7 @@ var controlSetup = {
 
 
 var myMap = L.map('mapid', {
-  // layers: [dark, countryOutlineLayer, flagIconLayer]
-  layers: [dark, populationLayer, flagIconLayer]
+  layers: [dark, countryOutlineLayer, flagIconLayer]
 }).setView([8.488092, 114.404754], 4);
 
 L.control.layers(baseMaps, overlayMaps, controlSetup
