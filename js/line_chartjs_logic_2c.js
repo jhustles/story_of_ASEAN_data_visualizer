@@ -6,7 +6,7 @@ var my_datasets = [];
 
 
 async function getLineChartData() {
-    await d3.csv("lineCtx_onload_1995_2018.csv", function(error, data) {
+    await d3.csv("js/data_csv/lineCtx_onload_1995_2018.csv", function(error, data) {
     if (error) throw error;
     console.log(data.length);
     console.log('HERE is the data');
@@ -159,7 +159,7 @@ getLineChartData();
 
 function selectFilterbyLineCtx(value){
 
-    d3.csv("lineChart_trends_1995_2018_2.csv", function(error, data) {
+    d3.csv("js/data_csv/lineChart_trends_1995_2018_2.csv", function(error, data) {
     filterData = data.filter((row) => row["indicator_name"] === value);
 
     my_datasets = [];

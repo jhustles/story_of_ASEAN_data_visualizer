@@ -8,7 +8,7 @@ var indicatorNames = [];
 // Gather Data for HBar and dynamically add the select options for the SelectFilterByHBar Function on the DOM
 async function gatherData() {
 
-    await d3.csv('asean_data_hbar_total_updated2020_2.csv', function(error, data) {
+    await d3.csv('js/data_csv/asean_data_hbar_total_updated2020_2.csv', function(error, data) {
         if (error) throw error;
         // console.log(data.length);
         console.log(data);

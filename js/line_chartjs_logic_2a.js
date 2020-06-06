@@ -7,7 +7,7 @@ var indicatorNames_raw = [];
 async function gatherLineIndicators(){
     // console.time("totalTime:");
 
-    await d3.csv('line_ctx_indicator_names.csv', function(error, data) {
+    await d3.csv('js/data_csv/line_ctx_indicator_names.csv', function(error, data) {
     if (error) throw error;
     // console.log('1st D3 LIST OF HBAR KEYS CSV FILE!!~~~~~~~');
         // console.log(data.length);
