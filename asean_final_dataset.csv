@@ -1,0 +1,263 @@
+Country Code,Country Name,indicator_name,2010,2011,2012,2013,2014,2015,2016,2017
+VNM,Vietnam,Land area (sq. km),310070,310070,310070,310070,310070,310070,310070,310070
+THA,Thailand,Land area (sq. km),510890,510890,510890,510890,510890,510890,510890,510890
+KHM,Cambodia,Land area (sq. km),176520,176520,176520,176520,176520,176520,176520,176520
+SGP,Singapore,Land area (sq. km),702,704,706,707,709,709,709,709
+PHL,Philippines,Land area (sq. km),298170,298170,298170,298170,298170,298170,298170,298170
+MYS,Malaysia,Land area (sq. km),328550,328550,328550,328550,328550,328550,328550,328550
+LAO,Lao PDR,Land area (sq. km),230800,230800,230800,230800,230800,230800,230800,230800
+IDN,Indonesia,Land area (sq. km),1811570,1811570,1811570,1811570,1811570,1811570,1811570,1811570
+BRN,Brunei Darussalam,Land area (sq. km),5270,5270,5270,5270,5270,5270,5270,5270
+VNM,Vietnam,"Population, total",88472512,89436644,90451881,91497725,92544915,93571567,94569072,95540800
+THA,Thailand,"Population, total",67208808,67530130,67843979,68143065,68416772,68657600,68863514,69037513
+KHM,Cambodia,"Population, total",14308740,14537886,14776866,15022692,15270790,15517635,15762370,16005373
+SGP,Singapore,"Population, total",5076732,5183688,5312437,5399162,5469724,5535002,5607283,5612253
+PHL,Philippines,"Population, total",93726624,95277940,96866642,98481032,100102249,101716359,103320222,104918090
+MYS,Malaysia,"Population, total",28112289,28635128,29170456,29706724,30228017,30723155,31187265,31624264
+LAO,Lao PDR,"Population, total",6246274,6333487,6415169,6494557,6576397,6663967,6758353,6858160
+IDN,Indonesia,"Population, total",242524123,245707511,248883232,252032263,255131116,258162113,261115456,263991379
+BRN,Brunei Darussalam,"Population, total",388662,394013,399748,405716,411704,417542,423196,428697
+VNM,Vietnam,"Population, male (% of total)",49.37,49.4,49.42,49.44,49.45,49.46,49.48,49.49
+THA,Thailand,"Population, male (% of total)",49.01,48.97,48.94,48.9,48.86,48.83,48.8,48.76
+SGP,Singapore,"Population, male (% of total)",49.34,49.33,49.34,49.36,49.37,49.39,49.4,49.41
+KHM,Cambodia,"Population, male (% of total)",48.71,48.74,48.75,48.76,48.77,48.77,48.78,48.79
+PHL,Philippines,"Population, male (% of total)",50.48,50.48,50.46,50.43,50.4,50.37,50.35,50.33
+MYS,Malaysia,"Population, male (% of total)",51.54,51.58,51.63,51.66,51.68,51.68,51.66,51.62
+LAO,Lao PDR,"Population, male (% of total)",49.75,49.77,49.79,49.81,49.83,49.84,49.86,49.88
+IDN,Indonesia,"Population, male (% of total)",50.42,50.43,50.42,50.41,50.39,50.37,50.36,50.34
+BRN,Brunei Darussalam,"Population, male (% of total)",51.63,51.65,51.64,51.6,51.55,51.52,51.49,51.47
+VNM,Vietnam,"Population, female (% of total)",50.63,50.6,50.58,50.56,50.55,50.54,50.52,50.51
+THA,Thailand,"Population, female (% of total)",50.99,51.03,51.06,51.1,51.14,51.17,51.2,51.24
+SGP,Singapore,"Population, female (% of total)",50.66,50.67,50.66,50.64,50.63,50.61,50.6,50.59
+KHM,Cambodia,"Population, female (% of total)",51.29,51.26,51.25,51.24,51.23,51.23,51.22,51.21
+PHL,Philippines,"Population, female (% of total)",49.52,49.52,49.54,49.57,49.6,49.63,49.65,49.67
+MYS,Malaysia,"Population, female (% of total)",48.46,48.42,48.37,48.34,48.32,48.32,48.34,48.38
+LAO,Lao PDR,"Population, female (% of total)",50.25,50.23,50.21,50.19,50.17,50.16,50.14,50.12
+IDN,Indonesia,"Population, female (% of total)",49.58,49.57,49.58,49.59,49.61,49.63,49.64,49.66
+BRN,Brunei Darussalam,"Population, female (% of total)",48.37,48.35,48.36,48.4,48.45,48.48,48.51,48.53
+VNM,Vietnam,Urban population (% of total),30.42,31.08,31.75,32.43,33.12,33.81,34.51,35.21
+THA,Thailand,Urban population (% of total),43.86,44.7,45.45,46.19,46.94,47.69,48.45,49.2
+KHM,Cambodia,Urban population (% of total),20.29,20.66,21.04,21.42,21.8,22.19,22.58,22.98
+SGP,Singapore,Urban population (% of total),100,100,100,100,100,100,100,100
+PHL,Philippines,Urban population (% of total),45.33,45.52,45.71,45.9,46.09,46.28,46.48,46.68
+MYS,Malaysia,Urban population (% of total),70.91,71.61,72.28,72.93,73.58,74.21,74.84,75.45
+LAO,Lao PDR,Urban population (% of total),30.06,30.66,31.26,31.87,32.49,33.11,33.74,34.37
+IDN,Indonesia,Urban population (% of total),49.91,50.6,51.28,51.96,52.64,53.31,53.99,54.66
+BRN,Brunei Darussalam,Urban population (% of total),74.96,75.31,75.66,76,76.33,76.66,76.99,77.31
+VNM,Vietnam,Rural population (% of total population),69.58,68.92,68.25,67.57,66.89,66.19,65.49,64.79
+THA,Thailand,Rural population (% of total population),56.14,55.3,54.56,53.81,53.06,52.31,51.55,50.8
+KHM,Cambodia,Rural population (% of total population),79.71,79.34,78.96,78.59,78.2,77.81,77.42,77.02
+SGP,Singapore,Rural population (% of total population),0,0,0,0,0,0,0,0
+PHL,Philippines,Rural population (% of total population),54.67,54.48,54.29,54.1,53.91,53.72,53.53,53.32
+MYS,Malaysia,Rural population (% of total population),29.09,28.39,27.73,27.07,26.42,25.79,25.16,24.55
+LAO,Lao PDR,Rural population (% of total population),69.94,69.34,68.74,68.13,67.51,66.89,66.26,65.63
+IDN,Indonesia,Rural population (% of total population),50.09,49.41,48.72,48.05,47.37,46.69,46.01,45.34
+BRN,Brunei Darussalam,Rural population (% of total population),25.04,24.69,24.34,24,23.67,23.34,23.01,22.69
+VNM,Vietnam,"Fertility rate, total (births per woman)",1.95,1.95,1.96,1.96,1.96,1.96,1.95,1.95
+THA,Thailand,"Fertility rate, total (births per woman)",1.55,1.54,1.53,1.52,1.51,1.5,1.48,1.47
+SGP,Singapore,"Fertility rate, total (births per woman)",1.15,1.2,1.29,1.19,1.25,1.24,1.2,1.16
+KHM,Cambodia,"Fertility rate, total (births per woman)",2.88,2.81,2.74,2.68,2.63,2.59,2.56,2.53
+PHL,Philippines,"Fertility rate, total (births per woman)",3.16,3.11,3.07,3.03,2.99,2.96,2.93,2.89
+MYS,Malaysia,"Fertility rate, total (births per woman)",2.15,2.13,2.11,2.09,2.07,2.06,2.04,2.02
+LAO,Lao PDR,"Fertility rate, total (births per woman)",3.15,3.06,2.97,2.9,2.82,2.76,2.7,2.64
+IDN,Indonesia,"Fertility rate, total (births per woman)",2.48,2.47,2.46,2.44,2.41,2.39,2.36,2.34
+BRN,Brunei Darussalam,"Fertility rate, total (births per woman)",1.84,1.86,1.87,1.88,1.89,1.88,1.87,1.86
+VNM,Vietnam,"Life expectancy at birth, total (years)",75.12,75.29,75.48,75.66,75.86,76.05,76.25,76.45
+THA,Thailand,"Life expectancy at birth, total (years)",73.92,74.2,74.45,74.68,74.9,75.1,75.3,75.5
+SGP,Singapore,"Life expectancy at birth, total (years)",81.54,81.74,82,82.25,82.5,82.74,82.85,82.9
+KHM,Cambodia,"Life expectancy at birth, total (years)",66.56,67.03,67.47,67.87,68.25,68.62,68.98,69.33
+PHL,Philippines,"Life expectancy at birth, total (years)",68.32,68.43,68.55,68.68,68.81,68.95,69.09,69.24
+MYS,Malaysia,"Life expectancy at birth, total (years)",74.21,74.41,74.61,74.8,74.98,75.14,75.3,75.45
+LAO,Lao PDR,"Life expectancy at birth, total (years)",64.36,64.8,65.21,65.6,65.98,66.34,66.68,67.02
+IDN,Indonesia,"Life expectancy at birth, total (years)",68.15,68.33,68.51,68.68,68.86,69.03,69.19,69.36
+BRN,Brunei Darussalam,"Life expectancy at birth, total (years)",76.72,76.73,76.76,76.82,76.92,77.05,77.2,77.37
+VNM,Vietnam,"Death rate, crude (per 1,000 people)",5.71,5.73,5.76,5.77,5.79,5.81,5.82,5.84
+THA,Thailand,"Death rate, crude (per 1,000 people)",7.28,7.35,7.44,7.53,7.64,7.75,7.87,8
+SGP,Singapore,"Death rate, crude (per 1,000 people)",4.4,4.5,4.5,4.6,4.7,4.8,4.8,5
+KHM,Cambodia,"Death rate, crude (per 1,000 people)",6.51,6.4,6.31,6.24,6.17,6.11,6.06,6.01
+PHL,Philippines,"Death rate, crude (per 1,000 people)",6.17,6.26,6.34,6.4,6.46,6.5,6.52,6.55
+MYS,Malaysia,"Death rate, crude (per 1,000 people)",4.69,4.71,4.73,4.76,4.81,4.87,4.93,5
+LAO,Lao PDR,"Death rate, crude (per 1,000 people)",7.37,7.22,7.08,6.96,6.85,6.75,6.66,6.58
+IDN,Indonesia,"Death rate, crude (per 1,000 people)",7.12,7.09,7.08,7.08,7.08,7.1,7.12,7.16
+BRN,Brunei Darussalam,"Death rate, crude (per 1,000 people)",3.2,3.26,3.33,3.39,3.45,3.51,3.58,3.64
+VNM,Vietnam,"International tourism, number of arrivals",5050000,6014000,6848000,7572000,7874000,7944000,10013000,12922000
+THA,Thailand,"International tourism, number of arrivals",15936000,19230000,22354000,26547000,24810000,29923000,32530000,35592000
+SGP,Singapore,"International tourism, number of arrivals",9161000,10390000,11098000,11899000,11864000,12051000,12914000,13903000
+KHM,Cambodia,"International tourism, number of arrivals",2508000,2882000,3584000,4210000,4503000,4775000,5012000,5602000
+PHL,Philippines,"International tourism, number of arrivals",3520000,3917000,4273000,4681000,4833000,5361000,5967000,6621000
+MYS,Malaysia,"International tourism, number of arrivals",24577000,24714000,25033000,25715000,27437000,25721000,26757000,25948000
+LAO,Lao PDR,"International tourism, number of arrivals",1670000,1894000,2291000,2700000,3164000,3543000,3315000,3257000
+IDN,Indonesia,"International tourism, number of arrivals",7003000,7650000,8044000,8802000,9435000,10407000,11519000,14040000
+BRN,Brunei Darussalam,"International tourism, number of arrivals",214000,242000,209000,225000,201000,218000,219000,259000
+VNM,Vietnam,Labor force with advanced education (% of total working-age population with advanced education),86.67,86.75,87.12,87.16,87.78,87.76,87.53,87.65
+THA,Thailand,Labor force with advanced education (% of total working-age population with advanced education),87.76,87.66,87.75,86.69,85.69,85.17,84.23,84.23
+KHM,Cambodia,Labor force with advanced education (% of total working-age population with advanced education),89.34,93.94,94.6,80.58,63.07,75.95,79.66,79.66
+PHL,Philippines,Labor force with advanced education (% of total working-age population with advanced education),65.05,65.13,64.04,63.77,63.49,63.16,63.3,63.3
+MYS,Malaysia,Labor force with advanced education (% of total working-age population with advanced education),62.38,65.66,66,67.31,68.25,69.33,69.25,69.25
+LAO,Lao PDR,Labor force with advanced education (% of total working-age population with advanced education),93.14,90.58,88.02,85.46,82.9,80.34,77.78,75.22
+IDN,Indonesia,Labor force with advanced education (% of total working-age population with advanced education),84.01,85.45,87.92,86.61,86.41,85.62,85.59,85.2
+BRN,Brunei Darussalam,Labor force with advanced education (% of total working-age population with advanced education),69.63,73.29,77.15,81.21,85.49,84.59,83.25,81.91
+VNM,Vietnam,GDP (constant 2010 US$),1.16E+11,1.23E+11,1.30E+11,1.37E+11,1.45E+11,1.55E+11,1.64E+11,1.75E+11
+THA,Thailand,GDP (constant 2010 US$),3.41E+11,3.44E+11,3.69E+11,3.79E+11,3.83E+11,3.94E+11,4.07E+11,4.23E+11
+SGP,Singapore,GDP (constant 2010 US$),2.36E+11,2.51E+11,2.62E+11,2.75E+11,2.86E+11,2.92E+11,2.99E+11,3.10E+11
+KHM,Cambodia,GDP (constant 2010 US$),11242275199,12037055708,12917367180,13867654630,14858161722,15903594934,16995073301,18201700723
+PHL,Philippines,GDP (constant 2010 US$),2.00E+11,2.07E+11,2.21E+11,2.36E+11,2.51E+11,2.66E+11,2.84E+11,3.03E+11
+MYS,Malaysia,GDP (constant 2010 US$),2.55E+11,2.69E+11,2.83E+11,2.97E+11,3.14E+11,3.30E+11,3.44E+11,3.65E+11
+LAO,Lao PDR,GDP (constant 2010 US$),7127792630,7700771123,8318842593,8986537875,9670589853,10373602257,11102149875,11867393084
+IDN,Indonesia,GDP (constant 2010 US$),7.55E+11,8.02E+11,8.50E+11,8.97E+11,9.42E+11,9.88E+11,1.04E+12,1.09E+12
+BRN,Brunei Darussalam,GDP (constant 2010 US$),13707370737,14220755409,14350568390,14045471214,13715438210,13637697103,13301457646,13478200979
+VNM,Vietnam,GDP (current US$),1.16E+11,1.36E+11,1.56E+11,1.71E+11,1.86E+11,1.93E+11,2.05E+11,2.24E+11
+THA,Thailand,GDP (current US$),3.41E+11,3.71E+11,3.98E+11,4.20E+11,4.07E+11,4.01E+11,4.12E+11,4.55E+11
+SGP,Singapore,GDP (current US$),2.36E+11,2.76E+11,2.91E+11,3.04E+11,3.12E+11,3.04E+11,3.10E+11,3.24E+11
+KHM,Cambodia,GDP (current US$),11242275199,12829541141,14054443213,15227991395,16702610842,18049954289,20016747754,22158209503
+PHL,Philippines,GDP (current US$),2.00E+11,2.24E+11,2.50E+11,2.72E+11,2.85E+11,2.93E+11,3.05E+11,3.14E+11
+MYS,Malaysia,GDP (current US$),2.55E+11,2.98E+11,3.14E+11,3.23E+11,3.38E+11,2.97E+11,2.97E+11,3.15E+11
+LAO,Lao PDR,GDP (current US$),7127792630,8749241114,10191350120,11942230508,13268458232,14390391264,15805707154,16853087485
+IDN,Indonesia,GDP (current US$),7.55E+11,8.93E+11,9.18E+11,9.13E+11,8.91E+11,8.61E+11,9.32E+11,1.02E+12
+BRN,Brunei Darussalam,GDP (current US$),13707370737,18525319978,19048495519,18093829923,17098342541,12930394938,11400653949,12128089002
+VNM,Vietnam,Consumer price index (2010 = 100),100,118.68,129.47,138,144.5,145.77,150.5,155.8
+THA,Thailand,Consumer price index (2010 = 100),100,103.81,106.94,109.28,111.35,110.34,110.55,111.29
+SGP,Singapore,Consumer price index (2010 = 100),100,105.25,110.06,112.66,113.81,113.22,112.62,113.27
+KHM,Cambodia,Consumer price index (2010 = 100),100,105.48,108.57,111.77,116.08,117.49,121.07,124.57
+PHL,Philippines,Consumer price index (2010 = 100),100,104.72,107.89,110.67,114.66,115.43,116.88,120.21
+MYS,Malaysia,Consumer price index (2010 = 100),100,103.17,104.89,107.1,110.46,112.79,115.15,119.61
+LAO,Lao PDR,Consumer price index (2010 = 100),100,107.57,112.15,119.29,124.22,125.8,127.81,128.87
+IDN,Indonesia,Consumer price index (2010 = 100),100,105.36,109.86,116.91,124.39,132.3,136.97,142.18
+BRN,Brunei Darussalam,Consumer price index (2010 = 100),100,100.14,100.25,100.64,100.43,100.01,99.28,99.11
+VNM,Vietnam,Exports of goods and services (% of GDP),72,79.39,80.03,83.63,86.4,89.78,93.62,101.59
+THA,Thailand,Exports of goods and services (% of GDP),66.49,70.85,69.76,68.12,69.27,68.7,68.47,68.17
+KHM,Cambodia,Exports of goods and services (% of GDP),54.08,54.08,57.89,62.39,62.6,61.72,61.28,60.73
+SGP,Singapore,Exports of goods and services (% of GDP),199.75,203.24,197.06,194.08,191.27,177.39,168.19,173.35
+PHL,Philippines,Exports of goods and services (% of GDP),34.8,32.03,30.82,28.02,28.91,28.4,28.1,30.95
+MYS,Malaysia,Exports of goods and services (% of GDP),86.93,85.26,79.3,75.63,73.79,70.55,67.79,71.39
+LAO,Lao PDR,Exports of goods and services (% of GDP),35.38,40.34,37.88,38.17,40.75,33.95,33.21,34.34
+IDN,Indonesia,Exports of goods and services (% of GDP),24.3,26.33,24.59,23.92,23.67,21.16,19.09,20.19
+BRN,Brunei Darussalam,Exports of goods and services (% of GDP),67.41,69.51,70.16,68.04,68.72,52.21,49.58,49.57
+VNM,Vietnam,Merchandise exports (current US$),72236666000,96905674000,1.15E+11,1.32E+11,1.50E+11,1.62E+11,1.77E+11,2.14E+11
+THA,Thailand,Merchandise exports (current US$),1.93E+11,2.23E+11,2.29E+11,2.29E+11,2.27E+11,2.14E+11,2.15E+11,2.37E+11
+SGP,Singapore,Merchandise exports (current US$),3.52E+11,4.10E+11,4.08E+11,4.10E+11,4.09E+11,3.47E+11,3.38E+11,3.73E+11
+KHM,Cambodia,Merchandise exports (current US$),5143216000,6704137000,7838101000,6665903000,6846000000,8542434000,10069332000,12089000000
+PHL,Philippines,Merchandise exports (current US$),51496000000,48305000000,52099000000,56698000000,62100000000,58827235355,57406123708,68712897400
+MYS,Malaysia,Merchandise exports (current US$),1.99E+11,2.28E+11,2.28E+11,2.28E+11,2.34E+11,1.99E+11,1.90E+11,2.18E+11
+LAO,Lao PDR,Merchandise exports (current US$),1746370000,2189550000,2270670000,2263940000,2662020000,3653305000,4244775000,4822563000
+IDN,Indonesia,Merchandise exports (current US$),1.58E+11,2.03E+11,1.90E+11,1.83E+11,1.76E+11,1.50E+11,1.45E+11,1.69E+11
+BRN,Brunei Darussalam,Merchandise exports (current US$),8907472000,12464938000,13000828000,11447187000,10508832881,6352662000,4875075000,5570575000
+VNM,Vietnam,Manufactures exports (% of merchandise exports),64.65,64.98,69.36,74.74,76.3,79.55,82.81,83.2
+THA,Thailand,Manufactures exports (% of merchandise exports),75.33,71.95,73.77,74.95,76.29,77.79,78.24,78.24
+SGP,Singapore,Manufactures exports (% of merchandise exports),73.13,68.67,69.76,70.62,71.29,76.99,79.07,76.64
+KHM,Cambodia,Manufactures exports (% of merchandise exports),96.07,93.54,92.68,90.32,90.63,92.9,93.15,93.15
+PHL,Philippines,Manufactures exports (% of merchandise exports),56.84,58.78,82.63,78.6,79.09,84.81,85.26,82.57
+MYS,Malaysia,Manufactures exports (% of merchandise exports),67.2,62.18,61.74,60.78,61.8,66.93,68.52,67.99
+LAO,Lao PDR,Manufactures exports (% of merchandise exports),16.02,14.45,9.98,16.7,25.29,29.87,27.34,27.34
+IDN,Indonesia,Manufactures exports (% of merchandise exports),37.5,34.16,36.18,37.8,40.94,44.66,47.67,43.64
+BRN,Brunei Darussalam,Manufactures exports (% of merchandise exports),4.52,4.31,3.94,3.05,6.8,6.59,11.42,9.6
+VNM,Vietnam,High-technology exports (% of manufactured exports),8.61,14.49,20.48,28.21,26.93,28.38,29.82,29.49
+THA,Thailand,High-technology exports (% of manufactured exports),24.02,20.74,20.54,20.09,20.43,21.44,21.51,21.51
+SGP,Singapore,High-technology exports (% of manufactured exports),49.91,45.16,45.29,46.99,47.18,49.28,48.83,49.17
+KHM,Cambodia,High-technology exports (% of manufactured exports),0.09,0.08,0.13,0.26,0.5,0.76,0.43,0.43
+PHL,Philippines,High-technology exports (% of manufactured exports),55.26,46.35,48.86,49.24,49,53.06,55.1,57.68
+MYS,Malaysia,High-technology exports (% of manufactured exports),44.52,43.39,43.72,43.57,43.87,42.8,42.97,28.15
+LAO,Lao PDR,High-technology exports (% of manufactured exports),6.62,8.04,8.7,9.49,24.94,35.21,33.58,33.58
+IDN,Indonesia,High-technology exports (% of manufactured exports),9.78,8.33,7.3,7.05,6.97,6.63,5.79,5.43
+BRN,Brunei Darussalam,High-technology exports (% of manufactured exports),25.98,19.4,12.77,15.24,7.76,17.93,8.28,29.9
+VNM,Vietnam,High-technology exports (current US$),4020110739,9118403941,16259339193,27819466251,30863791585,38735943417,43602170736,52779948158
+THA,Thailand,High-technology exports (current US$),34156221484,33264733346,33767674064,33901233425,34992376969,34543515383,34720646340,34720646340
+SGP,Singapore,High-technology exports (current US$),1.27E+11,1.26E+11,1.28E+11,1.36E+11,1.37E+11,1.31E+11,1.26E+11,1.36E+11
+KHM,Cambodia,High-technology exports (current US$),4699613,5139291,6848985,15578928,30874012,60108587,39805148,39805148
+PHL,Philippines,High-technology exports (current US$),16071867452,12949169027,20795049384,21810356356,23839225492,26192288870,26139673126,32114258015
+MYS,Malaysia,High-technology exports (current US$),59331817835,61126964506,61228924357,60378253483,63376041042,57257697127,55588250783,41172608986
+LAO,Lao PDR,High-technology exports (current US$),18944616,20711937,11789240,43699300,153563462,297939232,274940688,274940688
+IDN,Indonesia,High-technology exports (current US$),5742569481,5727738147,4962402547,4818332512,4980582046,4409587991,3947114863,3956863169
+BRN,Brunei Darussalam,High-technology exports (current US$),104629569,104099974,65481453,53165101,55449872,75036399,46102392,159575567
+VNM,Vietnam,Imports of goods and services (% of GDP),80.22,83.52,76.53,81.47,83.13,88.99,91.06,98.79
+THA,Thailand,Imports of goods and services (% of GDP),60.76,68.82,68.72,65.29,62.51,57.19,53.7,54.63
+KHM,Cambodia,Imports of goods and services (% of GDP),59.52,59.5,62.71,67.66,67.01,66.15,65.67,64.16
+SGP,Singapore,Imports of goods and services (% of GDP),173.7,176.45,173.63,171.61,167.98,151.66,142.06,149.08
+PHL,Philippines,Imports of goods and services (% of GDP),36.62,35.67,34.08,32.23,32.56,34.29,37.4,40.88
+MYS,Malaysia,Imports of goods and services (% of GDP),71.01,69.68,68.54,67.09,64.52,62.91,61.04,64.45
+LAO,Lao PDR,Imports of goods and services (% of GDP),49.34,51.36,60.31,60.01,58.31,51.85,41.88,41.49
+IDN,Indonesia,Imports of goods and services (% of GDP),22.4,23.85,24.99,24.71,24.41,20.78,18.33,19.17
+BRN,Brunei Darussalam,Imports of goods and services (% of GDP),27.96,30.03,35.48,42.9,30.65,32.69,37.74,35.6
+VNM,Vietnam,Merchandise imports (current US$),84838553000,1.07E+11,1.14E+11,1.32E+11,1.48E+11,1.66E+11,1.75E+11,2.12E+11
+THA,Thailand,Merchandise imports (current US$),1.83E+11,2.29E+11,2.49E+11,2.50E+11,2.28E+11,2.03E+11,1.94E+11,2.22E+11
+SGP,Singapore,Merchandise imports (current US$),3.11E+11,3.66E+11,3.80E+11,3.73E+11,3.66E+11,2.97E+11,2.92E+11,3.28E+11
+KHM,Cambodia,Merchandise imports (current US$),6790731000,9300000000,11350000000,9555193000,10692000000,13260568000,14100832000,15495041000
+PHL,Philippines,Merchandise imports (current US$),58467804000,63692684000,65349781000,65705431000,68705280000,74750940000,89435038076,1.02E+11
+MYS,Malaysia,Merchandise imports (current US$),1.65E+11,1.87E+11,1.96E+11,2.06E+11,2.09E+11,1.76E+11,1.68E+11,1.95E+11
+LAO,Lao PDR,Merchandise imports (current US$),2060430000,2404190000,3055120000,3080940000,4271230000,5675329000,5372368000,5635693000
+IDN,Indonesia,Merchandise imports (current US$),1.36E+11,1.77E+11,1.92E+11,1.87E+11,1.78E+11,1.43E+11,1.36E+11,1.57E+11
+BRN,Brunei Darussalam,Merchandise imports (current US$),2537789410,3628717000,3572227000,3612435000,3598739678,3229077000,2678506000,3084534000
+VNM,Vietnam,Manufactures imports (% of merchandise imports),72.85,70.74,73.72,76.5,76.6,78.33,80.07,79.63
+THA,Thailand,Manufactures imports (% of merchandise imports),70.01,67.25,68.74,66.91,66.92,72.16,74.15,74.15
+SGP,Singapore,Manufactures imports (% of merchandise imports),65.7,60.49,60.2,61.47,61.62,70.11,73.48,69.98
+KHM,Cambodia,Manufactures imports (% of merchandise imports),81.94,76.23,74.19,78.48,86.29,87.05,80.15,80.15
+PHL,Philippines,Manufactures imports (% of merchandise imports),67.3,50.08,63.9,65.07,65.19,73.87,75.95,73.62
+MYS,Malaysia,Manufactures imports (% of merchandise imports),74.23,70.35,68.98,67.23,67.18,70.94,73.83,71.63
+LAO,Lao PDR,Manufactures imports (% of merchandise imports),59.86,71,65.15,77.43,78.92,73.11,69.77,69.77
+IDN,Indonesia,Manufactures imports (% of merchandise imports),63.32,59.74,62.44,59.97,58.85,65.51,66.95,62.1
+BRN,Brunei Darussalam,Manufactures imports (% of merchandise imports),75.27,75.59,72.58,75.15,72.51,76.15,70.93,74.3
+VNM,Vietnam,"Manufacturing, value added (% of GDP)",12.95,13.35,13.28,13.34,13.18,13.69,14.27,15.33
+THA,Thailand,"Manufacturing, value added (% of GDP)",31.07,29.14,28.11,27.73,27.72,27.5,27.39,27.09
+KHM,Cambodia,"Manufacturing, value added (% of GDP)",14.69,15.17,15.09,15.49,15.4,16.01,16,16.2
+SGP,Singapore,"Manufacturing, value added (% of GDP)",20.18,18.99,18.63,17.26,17.76,17.98,17.68,17.97
+PHL,Philippines,"Manufacturing, value added (% of GDP)",21.44,21.09,20.56,20.41,20.61,20.04,19.65,19.46
+MYS,Malaysia,"Manufacturing, value added (% of GDP)",23.43,23.32,23.14,22.84,22.87,22.71,22.22,22.27
+LAO,Lao PDR,"Manufacturing, value added (% of GDP)",11.09,10.67,8.98,8.44,8.43,8.19,7.77,7.48
+IDN,Indonesia,"Manufacturing, value added (% of GDP)",22.04,21.76,21.45,21.03,21.08,20.99,20.52,20.16
+BRN,Brunei Darussalam,"Manufacturing, value added (% of GDP)",14.91,16.44,16.62,16.5,16.13,14.53,11.46,12.66
+VNM,Vietnam,"Listed domestic companies, total",267,294,301,301,305,307,320,344
+THA,Thailand,"Listed domestic companies, total",541,545,558,584,613,639,656,688
+SGP,Singapore,"Listed domestic companies, total",461,462,472,479,484,483,479,483
+PHL,Philippines,"Listed domestic companies, total",251,251,252,254,260,262,262,264
+MYS,Malaysia,"Listed domestic companies, total",948,932,911,900,895,892,890,890
+IDN,Indonesia,"Listed domestic companies, total",420,440,459,483,506,521,537,566
+VNM,Vietnam,Market capitalization of listed domestic companies (% of GDP),25.98,15.92,20.89,23.4,24.74,26.85,32.34,51.6
+THA,Thailand,Market capitalization of listed domestic companies (% of GDP),81.42,72.4,98.04,84.31,105.67,86.9,105.15,120.53
+SGP,Singapore,Market capitalization of listed domestic companies (% of GDP),273.76,216.79,263.21,244.51,241.65,210.44,206.75,243.05
+PHL,Philippines,Market capitalization of listed domestic companies (% of GDP),78.82,73.64,91.69,79.95,92.01,81.57,78.63,92.6
+MYS,Malaysia,Market capitalization of listed domestic companies (% of GDP),160.26,132.78,148.39,154.79,135.78,129.11,121.24,144.82
+IDN,Indonesia,Market capitalization of listed domestic companies (% of GDP),47.73,43.69,46.65,37.99,47.39,41.04,45.69,51.28
+VNM,Vietnam,Market capitalization of listed domestic companies (current US$),30115450000,21574350000,32552900000,40061270000,46067020000,51876650000,66395686031,1.15E+11
+THA,Thailand,Market capitalization of listed domestic companies (current US$),2.78E+11,2.68E+11,3.90E+11,3.54E+11,4.30E+11,3.49E+11,4.33E+11,5.49E+11
+SGP,Singapore,Market capitalization of listed domestic companies (current US$),6.47E+11,5.98E+11,7.65E+11,7.44E+11,7.53E+11,6.40E+11,6.40E+11,7.87E+11
+PHL,Philippines,Market capitalization of listed domestic companies (current US$),1.57E+11,1.65E+11,2.29E+11,2.17E+11,2.62E+11,2.39E+11,2.40E+11,2.90E+11
+MYS,Malaysia,Market capitalization of listed domestic companies (current US$),4.09E+11,3.96E+11,4.67E+11,5.00E+11,4.59E+11,3.83E+11,3.60E+11,4.56E+11
+IDN,Indonesia,Market capitalization of listed domestic companies (current US$),3.60E+11,3.90E+11,4.28E+11,3.47E+11,4.22E+11,3.53E+11,4.26E+11,5.21E+11
+VNM,Vietnam,"Stocks traded, total value (% of GDP)",16.51,5.53,5.8,6.08,11.71,9.66,10.85,17.01
+THA,Thailand,"Stocks traded, total value (% of GDP)",65.21,58.05,60.08,83.25,76.26,67.59,78.93,74.57
+SGP,Singapore,"Stocks traded, total value (% of GDP)",129.34,99.54,89.7,91.55,64.39,65.12,60.71,67.8
+PHL,Philippines,"Stocks traded, total value (% of GDP)",11.15,12.21,14.27,16.4,14.83,13.12,11.76,10.78
+MYS,Malaysia,"Stocks traded, total value (% of GDP)",45.01,43.74,39.33,43.98,42.2,37.58,33.12,43.67
+IDN,Indonesia,"Stocks traded, total value (% of GDP)",13.83,11.81,10.02,10.83,10.18,8.72,9.7,9.11
+VNM,Vietnam,"Stocks traded, total value (current US$)",19143840000,7491730000,8950805000,10409880000,21801890000,18664080000,22271630764,38059696682
+THA,Thailand,"Stocks traded, total value (current US$)",2.22E+11,2.15E+11,2.39E+11,3.50E+11,3.11E+11,2.71E+11,3.25E+11,3.40E+11
+SGP,Singapore,"Stocks traded, total value (current US$)",3.06E+11,2.75E+11,2.61E+11,2.79E+11,2.01E+11,1.98E+11,1.88E+11,2.20E+11
+PHL,Philippines,"Stocks traded, total value (current US$)",22249330000,27366630000,35684030000,44588930000,42213210000,38418040000,35851411587,33804496728
+MYS,Malaysia,"Stocks traded, total value (current US$)",1.15E+11,1.30E+11,1.24E+11,1.42E+11,1.43E+11,1.11E+11,98285417642,1.37E+11
+IDN,Indonesia,"Stocks traded, total value (current US$)",1.04E+11,1.05E+11,91929370000,98857720000,90721490000,75045300000,90406630407,92513090235
+VNM,Vietnam,Time required to start a business (days),36,36,32,34,34,20,24,22
+THA,Thailand,Time required to start a business (days),34,32,31,29.5,29.5,29.5,27.5,4.5
+KHM,Cambodia,Time required to start a business (days),102,102,102,101,101,87,99,99
+SGP,Singapore,Time required to start a business (days),2.5,2.5,2.5,2.5,2.5,2.5,2.5,2.5
+PHL,Philippines,Time required to start a business (days),37,36,36,36,34,29,28,35
+MYS,Malaysia,Time required to start a business (days),17.5,8.5,9.5,9.5,7.5,7.5,23.5,23.5
+LAO,Lao PDR,Time required to start a business (days),86,78,88,88,88,187,174,174
+IDN,Indonesia,Time required to start a business (days),75.5,75.5,75.5,75.5,52.5,47.8,24.9,23.1
+BRN,Brunei Darussalam,Time required to start a business (days),108.5,104.5,104.5,104.5,104.5,14.5,14.5,12.5
+VNM,Vietnam,"Trademark applications, total",31814,32001,33763,35628,38317,42564,48930,50648
+THA,Thailand,"Trademark applications, total",37656,38950,44963,46097,45661,52344,51615,43295
+KHM,Cambodia,"Trademark applications, total",3969,4567,5168,5854,4889,4889,4889,4889
+SGP,Singapore,"Trademark applications, total",16929,18202,19265,20033,21296,21380,22757,24053
+PHL,Philippines,"Trademark applications, total",16839,18611,20816,23042,26017,26337,32794,31071
+MYS,Malaysia,"Trademark applications, total",26370,28833,31876,32225,34571,35923,39107,41093
+IDN,Indonesia,"Trademark applications, total",47794,53196,62455,60983,46452,47544,62939,68103
+BRN,Brunei Darussalam,"Trademark applications, total",725,857,1128,1135,1176,1303,1493.5,1684
+VNM,Vietnam,"Foreign direct investment, net (BoP, current US$)",7100000000,6480000000,7168000000,6944000000,8050000000,10700000000,11600000000,13560000000
+THA,Thailand,"Foreign direct investment, net (BoP, current US$)",6615343922,-4702082850,-1361534446,3814466006,-766299561.6,3936528344,-10551601520,-10586049978
+SGP,Singapore,"Foreign direct investment, net (BoP, current US$)",19668673337,17255458936,34830382359,19110684888,16220985754,24551342898,33770708843,51115158318
+KHM,Cambodia,"Foreign direct investment, net (BoP, current US$)",1383735373,1509718402,1967669032,2006202368,1771407708,1725876447,2363522357,2706545274
+PHL,Philippines,"Foreign direct investment, net (BoP, current US$)",-1641779592,-342490414.4,-957805177.3,90422443.46,-1014348569,99650560.95,5882813657,6951710900
+MYS,Malaysia,"Foreign direct investment, net (BoP, current US$)",-4463611679,-2988958790,-8001103526,-2111932222,-5440442809,-684808753.5,3372772123,3753215663
+LAO,Lao PDR,"Foreign direct investment, net (BoP, current US$)",278805903.1,300743507.1,634614172.4,709968685.7,860588563.8,1038062947,920111853.7,1589664970
+IDN,Indonesia,"Foreign direct investment, net (BoP, current US$)",11106333135,11528394762,13716225988,12170055179,14733198283,10704478317,16135916019,18502038861
+BRN,Brunei Darussalam,"Foreign direct investment, net (BoP, current US$)",479520595.8,703751750.6,859107110.4,778412341.1,573906641.3,171289167.8,-150550827.3,467927550.3

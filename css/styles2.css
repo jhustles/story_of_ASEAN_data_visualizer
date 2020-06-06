@@ -71,3 +71,22 @@
     width: 50%;
     height: 50%;
   }
+
+  #chart1_Hbar {
+		-moz-user-select: none;
+		-webkit-user-select: none;
+		-ms-user-select: none;
+  }
+  
+ #chart2_line {
+
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+
+   background-color: black;
+   font-size: medium;
+   font-family: Georgia, 'Times New Roman', Times, serif;
+   color: 'white';
+ }
+

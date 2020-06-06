@@ -35,6 +35,16 @@
         integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
         crossorigin=""></script>
 
+        <!-- D3.js to read csv -->
+        <!-- <script src="https://d3js.org/d3.v5.min.js"></script> -->
+        <script src="https://d3js.org/d3.v4.min.js"></script>
+
+        <!-- Chart.JS CDN -->
+        <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
+        <script src="https://www.chartjs.org/samples/latest/utils.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-colorschemes"></script>
+
+
         <!-- JG's CSS -->
         <link href="css/styles2.css" rel="stylesheet" />
     </head>
@@ -75,7 +85,6 @@
         <!-- Masthead-->
         <header class="masthead">
             <div class="container">
-                <!-- <div class="masthead-subheading">Welcome To Our Studio!</div> -->
                 <div class="masthead-heading text-uppercase">WELCOME EVERYONE!</div>
                 <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="#mission">Start</a>
             </div>
@@ -198,8 +207,57 @@
             <div class="container">
                 <div class="text-center">
                     <h2 class="section-heading text-uppercase">DASHBOARDS</h2>
+                    <h3 class="section-subheading text-muted">Source: World Bank (data.worldbank.org/topic/economy-and-growth)</h3>
                 </div>
-                <div id="trends"></div>
+                    
+                    <div class="text-center">
+                          <!-- QuerySelector in JS and create a list of econ indicator names and create this dynamically in JS using DOM -->
+                        <p><h6>Select an Economic Indicator Below:</h6></p>
+                        <select id ="hBarIndicator_Selector" onchange="selectFilterbyHbar(this.value)">
+                            <!-- <option value="0">Avg. Death Rate, Crude (per 1K persons, Rounded)</option>
+                            <option value="1">Avg. Fertility Rate, Total (Births per woman, Rounded)</option>
+                            <option value='2'>Avg. Time Required To Start a Business (Days)</option>
+                            <option value="3">Foreign Direct Investment, Net (BoP, Curr. US$)</option>
+                            <option value="4">Gross Domestic Product (GDP) (Curr. US$)</option>
+                            <option value="5">High-technology Exports (Curr. US$)</option>
+                            <option value="6">International Tourism, Number of Arrivals</option>
+                            <option value="7">Land Area (Sq. Km.)</option>
+                            <option value="8">Listed Domestic Companies, Total</option>
+                            <option value="9">Market Capitalization of Listed Domestic Companies (Curr. US$)</option>
+                            <option value="10">Population, Total</option>
+                            <option value="11">Trademark Applications, Total</option> -->
+                        </select>
+
+
+                    </div>
+
+                    <canvas id="chart1_Hbar"></canvas>
+
+
+
+                    <!-- <div>
+                        <button id="randomizeData">Randomize Data</button>
+                        <button id="addDataset">Add Dataset</button>
+                        <button id="removeDataset">Remove Dataset</button>
+                        <button id="addData">Add Data</button>
+                        <button id="removeData">Remove Data</button>
+                    </div> -->
+
+                    <div class="text-center">
+                        <!-- QuerySelector in JS and create a list of econ indicator names and create this dynamically in JS using DOM -->
+                        <p><h6>Select an Economic Indicator Below:</h6></p>
+                        <select id ="lineCtxIndicator_Selector" onchange="selectFilterbyLineCtx(this.value)"></select>
+                        
+                    </div>
+
+                    <canvas id="chart2_line" width="1600" height="900"></canvas>
+
+            </div>
+<!-- 
+            <div class="lineChartArea">
+                <div id="chart2_line"></div>
+            </div> -->
+
         </section>
 
 
@@ -627,6 +685,8 @@
                 </div>
             </div>
         </div>
+
+        
         <!-- Bootstrap core JS-->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
@@ -638,6 +698,20 @@
         <!-- Core theme JS-->
         <script src="js/scripts.js"></script>
 
+        <!-- Chart Logic -->
+        
+        <!-- Newest combined chart logic -->
+        <script type="text/javascript" src="js/chartjs_logic_2.js"></script>
+        
+        
+        <!-- original working hbar below -->
+        <!-- <script type="text/javascript" src="js/chart1_hbar_logic.js"></script> -->
+
+        <!-- <script type="text/javascript" src="js/chart2_line_logic.js"></script> -->
+
+
+        <!-- working line chart -->
+        <!-- <script type="text/javascript" src="js/chart2_line_logic_new.js"></script> -->
 
         <!-- ASEAN Geo.json scripts total: 10 items-->
         <script type="text/javascript" src="js/geojson/aseanCountries.js"></script>
@@ -658,6 +732,8 @@
         <script type="text/javascript" src="js/config.js"></script>
         <!-- <script src="js/maplogic.js"></script> -->
         <script src="js/geojson/mlogic.js"></script>
+
+        
 
     </body>
 </html>
