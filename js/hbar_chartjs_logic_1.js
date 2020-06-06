@@ -69,7 +69,7 @@ var horizontalBarChartData = {
 function selectFilterbyHbar(value){
     console.log('2nd D3 LIST OF HBAR KEYS CSV FILE!!~~~~~~~');
     console.log('~~~~~~~~~~~~~~~~~~~');
-    d3.csv('asean_data_hbar_total_updated2020_2.csv', function(error, data) {
+    d3.csv('js/data_csv/asean_data_hbar_total_updated2020_2.csv', function(error, data) {
         if (error) throw error;
         console.log('SELECT FILTER BY HBAR FUNCTION');
         console.log(data);
