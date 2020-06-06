@@ -202,6 +202,8 @@
                 <div id="mapid"></div>
         </section>
 
+
+        <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
         <!-- DASHBOARD SECTION -->
         <section class="page-section bg-light" id="dashboardSection">
             <div class="container">
@@ -211,6 +213,7 @@
                 </div>
                     
                     <div class="text-center">
+
                           <!-- QuerySelector in JS and create a list of econ indicator names and create this dynamically in JS using DOM -->
                         <p><h6>Select an Economic Indicator Below:</h6></p>
                         <select id ="hBarIndicator_Selector" onchange="selectFilterbyHbar(this.value)">
@@ -234,15 +237,6 @@
                     <canvas id="chart1_Hbar"></canvas>
 
 
-
-                    <!-- <div>
-                        <button id="randomizeData">Randomize Data</button>
-                        <button id="addDataset">Add Dataset</button>
-                        <button id="removeDataset">Remove Dataset</button>
-                        <button id="addData">Add Data</button>
-                        <button id="removeData">Remove Data</button>
-                    </div> -->
-
                     <div class="text-center">
                         <!-- QuerySelector in JS and create a list of econ indicator names and create this dynamically in JS using DOM -->
                         <p><h6>Select an Economic Indicator Below:</h6></p>
@@ -251,6 +245,8 @@
                     </div>
 
                     <canvas id="chart2_line" width="1600" height="900"></canvas>
+
+                    <div id="test_line_data"></div>
 
             </div>
 <!-- 
@@ -686,7 +682,7 @@
             </div>
         </div>
 
-        
+
         <!-- Bootstrap core JS-->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
@@ -699,39 +695,26 @@
         <script src="js/scripts.js"></script>
 
         <!-- Chart Logic -->
-        
-        <!-- Newest combined chart logic -->
-        <script type="text/javascript" src="js/chartjs_logic_2.js"></script>
-        
-        
-        <!-- original working hbar below -->
-        <!-- <script type="text/javascript" src="js/chart1_hbar_logic.js"></script> -->
 
-        <!-- <script type="text/javascript" src="js/chart2_line_logic.js"></script> -->
+        <script type="text/javascript" defer src="js/hbar_chartjs_logic_1.js"></script>
+        <script type="text/javascript" defer src="js/hbar_chartjs_logic_1b.js"></script>
+        <script type="text/javascript" defer src="js/line_chartjs_logic_2a.js"></script>
+
+        <script type="text/javascript" defer src="js/line_chartjs_logic_2c.js"></script>
+        <script type="text/javascript" defer src="js/line_chartjs_logic_2d.js"></script>
+        <script type="text/javascript" defer src="js/line_chartjs_logic_2e.js"></script>
 
 
-        <!-- working line chart -->
-        <!-- <script type="text/javascript" src="js/chart2_line_logic_new.js"></script> -->
-
-        <!-- ASEAN Geo.json scripts total: 10 items-->
+        <!-- ASEAN Geo.json scripts total: 2 items-->
         <script type="text/javascript" src="js/geojson/aseanCountries.js"></script>
-        <!-- <script type="text/javascript" src="js/geojson/vietnam.js"></script>
-        <script type="text/javascript" src="js/geojson/thailand.js"></script>
-        <script type="text/javascript" src="js/geojson/singapore.js"></script>
-        <script type="text/javascript" src="js/geojson/philippines.js"></script>
-        <script type="text/javascript" src="js/geojson/myanmar.js"></script>
-        <script type="text/javascript" src="js/geojson/malaysia.js"></script>
-        <script type="text/javascript" src="js/geojson/lao.js"></script>
-        <script type="text/javascript" src="js/geojson/indonesia.js"></script>
-        <script type="text/javascript" src="js/geojson/cambodia.js"></script>
-        <script type="text/javascript" src="js/geojson/brunei.js"></script> -->
+
         <script type="text/javascript" src="js/geojson/aseanCountriesSummary.js"></script>
 
 
           <!-- MapBox API Key -->
         <script type="text/javascript" src="js/config.js"></script>
         <!-- <script src="js/maplogic.js"></script> -->
-        <script src="js/geojson/mlogic.js"></script>
+        <script defer src="js/geojson/mlogic.js"></script>
 
         
 

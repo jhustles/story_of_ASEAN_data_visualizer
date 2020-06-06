@@ -1,7 +1,7 @@
 // Create selector + Selector + filter function
-let indicatorNames_raw = [];
+var indicatorNames_raw = [];
 
-let lineSelector = document.querySelector('#lineCtxIndicator_Selector');
+var lineSelector = document.querySelector('#lineCtxIndicator_Selector');
 
 d3.csv('lineChart_trends_1995_2018_2.csv', function(error, data) {
     if (error) throw error;
@@ -30,7 +30,7 @@ d3.csv('lineChart_trends_1995_2018_2.csv', function(error, data) {
 //output this list of objects chart it
 
 
-
+var my_datasets = [];
 
 // this loop with d3 loops thru the CSV, and outputs a list of objects of all the Y-Values by country for plotting
 // d3.csv("lineChart_trends_1995_2018_3.csv", function(error, data) {
@@ -64,10 +64,10 @@ d3.csv("lineChart_trends_1995_2018_2.csv", function(error, data) {
     // let filterby = 'Consumer price index (2010 = 100)';
 
     // let filterby = 'Current health expenditure (% of GDP)';
-    let filterby = 'Trade (% Of GDP)';
+    var filterby = 'Trade (% Of GDP)';
 
     // filterData is a list of objects outputted by the arrrow function
-    let filterData = data.filter((row) => row["indicator_name"] === filterby);
+    var filterData = data.filter((row) => row["indicator_name"] === filterby);
 // extract items from each object
     for(var i=0; i<filterData.length;i++){
         var newline = filterData[i];
@@ -143,7 +143,7 @@ d3.csv("lineChart_trends_1995_2018_2.csv", function(error, data) {
 
 /////////////////////////////////////////////////////////////////////////
 
-let x_Axis_Labels = [
+var x_Axis_Labels = [
     "2000",
     "2001",
     "2002",
@@ -169,7 +169,7 @@ let x_Axis_Labels = [
 // let my_dataset_with_bgColor = colorArray.concat(my_datasets);
 
 // lineChartData === "config" in the examples
-let lineChartData = {
+var lineChartData = {
     type: 'line',
     data:{
         labels: x_Axis_Labels,
@@ -224,7 +224,7 @@ window.onload = function() {
 
     // create and push the unique list of indicator names, and create a options for selection on the HTML
 
-    let indicatorNamesDistinct = indicatorNames_raw.filter((x, i, a) => a.indexOf(x) == i);
+    var indicatorNamesDistinct = indicatorNames_raw.filter((x, i, a) => a.indexOf(x) == i);
 
     console.log('WINOW - HERE IS INDICATOR NAMES DISTINCT+++++++')
     console.log(indicatorNamesDistinct)
@@ -235,7 +235,7 @@ window.onload = function() {
 
 
 
-    let ctx_line = document.getElementById('chart2_line').getContext('2d');
+    var ctx_line = document.getElementById('chart2_line').getContext('2d');
     window.myLine = new Chart(ctx_line, lineChartData);
 };
 
