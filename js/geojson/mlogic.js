@@ -8,7 +8,7 @@ var myMap = L.map('mapid').setView([8.488092, 114.404754], 4);
 var dark = L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
     attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
     minZoom: 3.5,
-    maxZoom: 7,
+    maxZoom: 5,
     id: 'mapbox/dark-v10',
     tileSize: 512,
     zoomOffset: -1,
@@ -19,7 +19,7 @@ var dark = L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?
 var light = L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
     attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
     minZoom: 3.5,
-    maxZoom: 7,
+    maxZoom: 5,
     // id: 'mapbox/dark-v10',
     // id: "mapbox.streets",
     id: 'mapbox/light-v10',
@@ -32,7 +32,7 @@ var light = L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}
 var street = L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
     attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
     minZoom: 3.5,
-    maxZoom: 7,
+    maxZoom: 5,
     // id: 'mapbox/dark-v10',
     // id: "mapbox.streets",
     id: 'mapbox/streets-v11',
@@ -253,9 +253,10 @@ geojson = L.geoJson(aseanData, {
 
 
 var baseMaps = {
+    Street: street,
     Light: light,
-    Dark: dark,
-    Street: street
+    Dark: dark
+    
 };
 
 var overlayMaps = {

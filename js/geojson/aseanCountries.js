@@ -7,7 +7,7 @@ var aseanData =
 		"id": "1",
 		"properties":
 		{
-            "name": "brunei",
+            "name": "Brunei Darussalam",
             population: 428697,
             land_sq_km: 5270,
             "density": Math.round(428697/5270),
@@ -634,7 +634,7 @@ var aseanData =
 		"id": "2",
 		"properties":
 		{
-            "name": "cambodia",
+            "name": "Cambodia",
             population: 16005373,
             land_sq_km: 176520,
             "density": 5.851,
@@ -67224,7 +67224,7 @@ var aseanData =
 		"id": "4",
 		"properties":
 		{
-            "name": "lao",
+            "name": "Lao PDR",
             population: 6858160,
             land_sq_km: 230800,
             "density": Math.round(6858160/230800),
@@ -71941,7 +71941,7 @@ var aseanData =
 		"id": "5",
 		"properties":
 		{
-            "name": "malaysia",
+            "name": "Malaysia",
             population: 31624264,
             land_sq_km: 328550,
 			"density": Math.round(31624264/328550)

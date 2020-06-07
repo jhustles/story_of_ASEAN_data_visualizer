@@ -83,7 +83,7 @@ async function getLineChartData() {
     return filterby;
 }
 
-
+// this is used for labeling the x-axis when the chart is drawn
 var x_Axis_Labels = [
     "2000",
     "2001",
@@ -106,6 +106,7 @@ var x_Axis_Labels = [
     "2018"
 ];
 
+// this is used to return the name of the country for the tool tips
 var countries_Line = [
     "Brunei Darussalam", //0
     "Cambodia",
@@ -156,16 +157,10 @@ function dynamic_Yaxis_Label_Signs(hbarSearchValue, number){
         }
     } else {
         console.log('Search contains NO SIGNS')
-
-        if (number >= 101) {
-            number_f = number.toLocaleString('en') + ' (K)';
-            return number_f;
-
-        } else {
             
             number_f = number.toLocaleString('en');
             return number_f;
-        }
+
     }
 };
 
@@ -185,77 +180,81 @@ var lineChartData = {
         responsive: true,
         hoverMode: 'index',
         stacked: false,
-            scales: {
-                yAxes: [
-                    { // Logic to format the xAxes 
-                        ticks: {
-                            beginAtZero: true,
-                            // callback: function(label, index, labels) {
-                            //     return label.toLocaleString('en');
+        // title: {
+        //     display: true,
+        //     text: ' '
+        // },
+        scales: {
+            yAxes: [
+                { // Logic to format the xAxes 
+                    ticks: {
+                        beginAtZero: true,
+                        // callback: function(label, index, labels) {
+                        //     return label.toLocaleString('en');
+                        // }
+                        callback: function(label, index, labels) {
+                            console.log('LOOOK RIGHT HURRRRRRRRRRR')
+                            console.log(label); // label draws from top down. yxis "label"
+                            // console.log(index); // outputted nothing
+                            // console.log(labels); //outputted nothing
+
+                        //     // for this function, you will pass in filterby
+                        // function determineSign(hbarSearchValue, number){
+                            // var hbarSearchValue = filterby; // going to pass in filterby
+                            // console.log('The current filter by is: ')
+                            // console.log(hbarSearchValue);
+                            //let number = label; // find out how to refer to the 'label' value you're targeting, and pass it.
+
+                            // if (hbarSearchValue.includes('%') === true){
+                            //     console.log('Search contains PERCENTAGE % sign')
+                            //     number_f = number.toLocaleString('en') + '%';
+                            //     return number_f;
+
+                            // } else if (hbarSearchValue.includes('$') === true) {
+
+                            //     console.log('Search contains DOLLAR $ sign')
+
+                            //     if (number >= 1000000) {
+                            //         number = number / 1000000;
+                            //         number_f = number.toLocaleString('en') + ' ($MM)';
+                            //         return number_f;
+        
+                            //     } else if (number >= 1000) {
+                            //         number = number / 1000;
+                            //         number_f = number.toLocaleString('en') + ' ($K)';
+                            //         return number_f;
+
+                            //     } else if (number >= 101) {
+                            //         number_f = number.toLocaleString('en') + ' ($K)';
+                            //         return number_f;
+
+                            //     } else {
+                            //         number_f = number.toLocaleString('en') + ' ($)';
+                            //         return number_f;
+                            //     }
+                            // } else {
+                            //     console.log('Search contains NO SIGNS')
+
+                            //     if (number >= 101) {
+                            //         number_f = number.toLocaleString('en') + ' (K)';
+                            //         return number_f;
+
+                            //     } else {
+                                    
+                            //         number_f = number.toLocaleString('en');
+                            //         return number_f;
+                            //     }
                             // }
-                            callback: function(label, index, labels) {
-                                console.log('LOOOK RIGHT HURRRRRRRRRRR')
-                                console.log(label); // label draws from top down. yxis "label"
-                                // console.log(index); // outputted nothing
-                                // console.log(labels); //outputted nothing
 
-                            //     // for this function, you will pass in filterby
-                            // function determineSign(hbarSearchValue, number){
-                                // var hbarSearchValue = filterby; // going to pass in filterby
-                                console.log('The current filter by is: ')
-                                // console.log(hbarSearchValue);
-                                //let number = label; // find out how to refer to the 'label' value you're targeting, and pass it.
-
-                                // if (hbarSearchValue.includes('%') === true){
-                                //     console.log('Search contains PERCENTAGE % sign')
-                                //     number_f = number.toLocaleString('en') + '%';
-                                //     return number_f;
-
-                                // } else if (hbarSearchValue.includes('$') === true) {
-
-                                //     console.log('Search contains DOLLAR $ sign')
-
-                                //     if (number >= 1000000) {
-                                //         number = number / 1000000;
-                                //         number_f = number.toLocaleString('en') + ' ($MM)';
-                                //         return number_f;
-            
-                                //     } else if (number >= 1000) {
-                                //         number = number / 1000;
-                                //         number_f = number.toLocaleString('en') + ' ($K)';
-                                //         return number_f;
-    
-                                //     } else if (number >= 101) {
-                                //         number_f = number.toLocaleString('en') + ' ($K)';
-                                //         return number_f;
-
-                                //     } else {
-                                //         number_f = number.toLocaleString('en') + ' ($)';
-                                //         return number_f;
-                                //     }
-                                // } else {
-                                //     console.log('Search contains NO SIGNS')
-
-                                //     if (number >= 101) {
-                                //         number_f = number.toLocaleString('en') + ' (K)';
-                                //         return number_f;
-    
-                                //     } else {
-                                        
-                                //         number_f = number.toLocaleString('en');
-                                //         return number_f;
-                                //     }
-                                // }
-
-                                dynamic_Yaxis_Label_Signs(filterby, label);
-                                return number_f;
-                                
-                            }
+                            dynamic_Yaxis_Label_Signs(filterby, label);
+                            return number_f;
                             
                         }
+                        
                     }
-                ]
-            }
+                }
+            ]
+        }
             ,tooltips: {
                 callbacks: {
                     label: function(tooltipItem, data) {
@@ -276,9 +275,10 @@ var lineChartData = {
                         let tt_pointer_value = Math.round(tooltipItem.value).toFixed(2);
 
                         dynamic_Yaxis_Label_Signs(filterby, tt_pointer_value);
-                        // return number_f;
-
-                        tt_line_label += `${tt_countryName} - ${number_f}`;
+                        // this function returns var number_f - formattted number; // 
+                        
+                        // have the tooltip return the country_name, indicator name, and the formatted value
+                        tt_line_label += tt_countryName + " | " + filterby + " - " + number_f;
 
                         return tt_line_label;
                         
