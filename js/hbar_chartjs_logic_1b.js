@@ -19,8 +19,15 @@ var horizontal_bar_chart_input = {
         scales: {
             xAxes: [
                 { // Logic to format the xAxes 
+                    gridLines: {
+                        display: false ,
+                        color: "#FFF"
+                      },
                     ticks: {
                         beginAtZero: true,
+                        fontSize: 17,
+                        maxRotation: 30,
+                        minRotation: 30,
                         // callback: function(label, index, labels) {
                         //     return label.toLocaleString('en');
                         // }
@@ -48,6 +55,19 @@ var horizontal_bar_chart_input = {
                     ,scaleLabel: {
                         display: true,
                     }
+                }
+            ],yAxes: [
+                { // Logic to format the xAxes 
+                    gridLines: {
+                        display: true ,
+                        color: "#FFF"
+                    },
+                    ticks: {
+                        beginAtZero: true,
+                        fontSize: 17,
+                            
+                    }
+
                 }
             ]
         },tooltips: {

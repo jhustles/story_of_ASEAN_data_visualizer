@@ -66,9 +66,9 @@
                         <!-- <li class="nav-item dropdown"><a class="nav-link js-scroll-trigger" href="#dashboards">DashBoards</a></li> -->
                         <!--  -->
                         <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">DashBoards</a>
-                                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="#hbar_chart_section">2018 Economic Indicators</a>
-                                <a class="dropdown-item" href="#line_chart_section">Trends Over Time (2000 - 2018)</a>
+                                <div class="dropdown-menu bg-dark " aria-labelledby="navbarDropdown">
+                                <a class="bg-dark dropdown-item nav-link js-scroll-trigger" href="#hbar_chart_section">2018 Economic Indicators</a>
+                                <a class="bg-dark dropdown-item nav-link js-scroll-trigger" href="#line_chart_section">Trends Over Time (2000 - 2018)</a>
                                 <!-- <a class="dropdown-item" href="plot2-2.html">Tweets vs Average Retweets</a>
                                 <a class="dropdown-item" href="plot3-3.html">Tweets vs Total Reviews</a>
                                 <a class="dropdown-item" href="plot4-4.html">Tweets vs Ratings</a> -->
@@ -76,7 +76,7 @@
 
                         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#portfolio">Insights</a></li>
                         
-                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#about">About</a></li>
+                        <!-- <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#about">About</a></li> -->
                         <!-- <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#contact">Contact</a></li> -->
                     </ul>
                 </div>
@@ -205,7 +205,7 @@
 
         <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
         <!-- DASHBOARD SECTION -->
-        <section class="page-section bg-light" id="hbar_chart_section">
+        <section class="page-section" id="hbar_chart_section">
             <div class="container">
                 <div class="text-center">
                     <h2 id=dashboard_title class="section-heading text-uppercase">DASHBOARDS</h2>
@@ -234,12 +234,14 @@
 
                     </div>
                     <div class="box_around_chart">
-                        <canvas id="chart1_Hbar" width="1600" height="900"></canvas>
+                        <div class="bg-dark" width="2000" height="900">
+                        <canvas id="chart1_Hbar" class="bg-dark" width="1600" height="900"></canvas>
+                        </div>
                     </div>
 
         </section>
 
-        <section class="page-section" id="line_chart_section">
+        <section class="page-section  bg-light" id="line_chart_section">
             <div class="container">
                 <!-- <div class="text-center">
                     <h2 id=dashboard_title class="section-heading text-uppercase">DASHBOARDS</h2>
@@ -271,15 +273,16 @@
 
          <!-- INSIGHTS / former Portfolio Grid-->
          <!-- #############################################-->
-         <section class="page-section bg-light" id="portfolio">
+         <section class="page-section" id="portfolio">
             <div class="container">
                 <div class="text-center">
                     <h2 class="section-heading text-uppercase">Insights</h2>
                     <br>
                     <!-- <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3> -->
                 </div>
-                <div class="row">
-                    <div class="col-lg-4 col-sm-6 mb-4 insightResize">
+                <div class="row"> 
+                    <!-- ///////////////////////LOOK AT INSIGHT RESIZE HERE -->
+                    <div class="col-lg-4 col-sm-6 mb-4">
                         <div class="portfolio-item">
                             <a class="portfolio-link" data-toggle="modal" href="#portfolioModal1"
                                 ><div class="portfolio-hover">
@@ -288,8 +291,6 @@
                                 <img class="img-fluid" src="assets/img/portfolio/01-thumbnail.jpg" alt=""
                             /></a>
                             <div class="portfolio-caption">
-                                <br>
-                                <br>
                                 <div class="portfolio-caption-heading">Five Tiger Cubs</div>
                                 <!-- <div class="portfolio-caption-subheading text-muted">Of South East Asia</div> -->
                             </div>
@@ -329,7 +330,7 @@
                                 ><div class="portfolio-hover">
                                     <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
                                 </div>
-                                <img class="img-fluid" src="assets/img/portfolio/04-thumbnail.jpg" alt=""
+                                <img class="img-fluid" src="assets/img/portfolio/04-thumbnail (3).jpg" alt=""
                             /></a>
                             <div class="portfolio-caption">
                                 <div class="portfolio-caption-heading">Philippines</div>
@@ -539,7 +540,7 @@
                             <div class="col-lg-8">
                                 <div class="modal-body">
                                     <!-- Project Details Go Here-->
-                                    <h2 class="text-uppercase">The Tiger Cubs of South East Asia</h2>
+                                    <h2 class="text-uppercase">The Tiger Cubs of Southeast Asia</h2>
                                     <p class="item-intro text-muted">Indonesia | Malaysia | Philippines | Thailand | Vietnam</p>
                                     <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/01-full.jpg" alt="" />
                                     <p>These developing economies are following the export-driven economic model that enabled the Four Asian Tigers (Hong Kong, Singapore, South Korea, and Taiwan) to become highly developed industrial economies. Therefore, these aspiring Tiger countries are referred to as “cubs.”</p>

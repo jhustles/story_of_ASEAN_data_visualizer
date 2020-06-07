@@ -157,44 +157,78 @@ function dynamic_Yaxis_Label_Signs(hbarSearchValue, number){
         }
     } else {
         console.log('Search contains NO SIGNS')
-            
-            number_f = number.toLocaleString('en');
+        if (number >= 1000000) {
+            number = number / 1000000;
+            number_f = number.toLocaleString('en') + ' (MM)';
             return number_f;
 
+        } else if (number >= 10000) {
+            number = number / 1000;
+            number_f = number.toLocaleString('en') + ' (K)';
+            return number_f;
+
+        } else{
+            number_f = number.toLocaleString('en');
+            return number_f;
+        }
     }
 };
 
 
 
 
-
+Chart.defaults.global.defaultFontSize = 15; // adjusts the fonts for the color tags of the country labels
+Chart.defaults.global.defaultFontColor = "#fff";
 
 var lineChartData = {
     type: 'line',
     data:{
         labels: x_Axis_Labels,
-        datasets: my_datasets
+        datasets: my_datasets,
+        fontSize: 20,
+        fontColor: '#fff'
         // datasets: my_dataset_with_bgColor
     },
     options: {
         responsive: true,
         hoverMode: 'index',
         stacked: false,
-        // title: {
-        //     display: true,
-        //     text: ' '
-        // },
+        legend: {
+            display: true,
+            fontSize: 10,
+            fontColor: '#fff'
+        },
         scales: {
+            xAxes: [{
+                gridLines: {
+                    display: false ,
+                    color: "#FFF"
+                },
+                ticks: {
+                    fontSize: 17,
+                    maxRotation: 60,
+                    minRotation: 60,
+                    fontColor: '#fff',
+                    padding: 4
+                }
+            }],
             yAxes: [
                 { // Logic to format the xAxes 
+                    gridLines: {
+                        display: true ,
+                        color: "#FFF"
+                    },
                     ticks: {
                         beginAtZero: true,
+                        fontSize: 17,
+                        fontColor: '#fff',
+                        padding: 4,
                         // callback: function(label, index, labels) {
                         //     return label.toLocaleString('en');
                         // }
                         callback: function(label, index, labels) {
-                            console.log('LOOOK RIGHT HURRRRRRRRRRR')
-                            console.log(label); // label draws from top down. yxis "label"
+                            // console.log('LOOOK RIGHT HURRRRRRRRRRR')
+                            // console.log(label); // label draws from top down. yxis "label"
                             // console.log(index); // outputted nothing
                             // console.log(labels); //outputted nothing
 
@@ -253,10 +287,12 @@ var lineChartData = {
                         
                     }
                 }
-            ]
+            ],
+            
         }
             ,tooltips: {
                 callbacks: {
+                    mode: 'single',
                     label: function(tooltipItem, data) {
                         // Below is the logic that divides the numbers and formats the tool tip
                         // let label = data.label;
@@ -264,23 +300,43 @@ var lineChartData = {
                         console.log(data);
                         console.log('HERE"S THE TOOL TIP ITEM');
                         console.log(tooltipItem);
-                        let tt_line_label = '';
-                        let labelIndex = tooltipItem.datasetIndex;
+                        // let tt_line_label = '';
+                        // let labelIndex = tooltipItem.datasetIndex;                        
+                        // // console.log('Here is the labelIndex which should be equal to tooltipItem');
+                        // // console.log(labelIndex);
 
+                        // var tt_countryName = countries_Line[labelIndex];
+                        // let tt_pointer_value = Math.round(tooltipItem.value).toFixed(2);
+
+                        // dynamic_Yaxis_Label_Signs(filterby, tt_pointer_value);
+                        // // this function returns var number_f - formattted number; // 
                         
+                        // // have the tooltip return the country_name, indicator name, and the formatted value
+                        // tt_line_label += tt_countryName + " | " + filterby + " - " + number_f;
+
+                        // return tt_line_label;
+
+                        // this gives 3 seperate lines, but assigns colors to them. This must mean each has a default color option
+                        let tt_line_label_array = []; // putting the label into an array allows the color square to disply on the tooltip.
+                        let tt_line_label = '';
+
+                        // Extract index number to set up extract the name from the countries list
+                        let labelIndex = tooltipItem.datasetIndex;                        
                         // console.log('Here is the labelIndex which should be equal to tooltipItem');
-                        // console.log(labelIndex);
+                        // console.log(labelIndex); // pull the country name using the index from the list of countries
 
                         var tt_countryName = countries_Line[labelIndex];
+                        
                         let tt_pointer_value = Math.round(tooltipItem.value).toFixed(2);
 
+                        // dynamic_Yaxis_Label_Signs FUNCTION returns var number_f - formattted number; // 
                         dynamic_Yaxis_Label_Signs(filterby, tt_pointer_value);
-                        // this function returns var number_f - formattted number; // 
                         
-                        // have the tooltip return the country_name, indicator name, and the formatted value
-                        tt_line_label += tt_countryName + " | " + filterby + " - " + number_f;
+                        tt_line_label += tt_countryName + " - " + number_f;
 
-                        return tt_line_label;
+                        tt_line_label_array.push(tt_line_label);
+
+                        return tt_line_label_array;
                         
                             
                         }

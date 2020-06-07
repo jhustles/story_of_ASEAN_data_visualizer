@@ -133,16 +133,32 @@
    color: 'white';
  }
 
-.insightResize{
-  height: 380px;
-  width: 340px;
+ .row.display-flex {
+  display: flex;
+  flex-wrap: wrap;
+}
+.row.display-flex > [class*='col-'] {
+  display: flex;
+  flex-direction: column;
 }
 
-
+#portfolio{
+  background-image: url('https://images.unsplash.com/photo-1428908728789-d2de25dbd4e2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
  #about {
 
 
   background-image: url("https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fimg04.deviantart.net%2Ff521%2Fi%2F2013%2F243%2Fb%2F5%2Fjourney_to_the_west_by_artoftu-d6kf2uy.jpg&f=1&nofb=1");
+  /* Full height */
+  height: 100%;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 
   /* Full height */
   height: 100%;
