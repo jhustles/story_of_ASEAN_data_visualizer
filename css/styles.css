@@ -9963,9 +9963,9 @@ p {
 }
 .page-section h2.section-heading {
   /* justify-content: center; */
-  font-size: 2.5rem;
+  font-size: 2.25rem;
   margin-top: 0;
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
 }
 .page-section h3.section-subheading {
   font-size: 1rem;
@@ -10451,9 +10451,10 @@ section#contact form#contactForm :-ms-input-placeholder {
   color: #ced4da;
 }
 
-.footer {
-  /* background-color: #212529; */
+/* #footer_custom {
+  background-color: #212529;
+  padding: 0;
   text-align: center;
   font-size: 0.9rem;
   font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-}
+} */

@@ -4,6 +4,7 @@ console.log('starting script 2c');
 
 var my_datasets = [];
 
+var filterby = 'Current Health Expenditure (% Of GDP)'; // this is meant to be a global variable to be used in script.
 
 async function getLineChartData() {
     await d3.csv("js/data_csv/lineCtx_onload_1995_2018.csv", function(error, data) {
@@ -14,7 +15,7 @@ async function getLineChartData() {
     console.log(data);
     console.log('++++++++++++++++++++++++++++++++');
 
-    var filterby = 'Current Health Expenditure (% Of GDP)';
+    
     // filterData is a list of objects outputted by the arrrow function
     var filterData = data.filter((row) => row["indicator_name"] === filterby);
 // extract items from each object
@@ -78,7 +79,9 @@ async function getLineChartData() {
     console.log(my_datasets);
     console.log('===============');
     // console.log(xAxis_Years);
-});}
+});
+    return filterby;
+}
 
 
 var x_Axis_Labels = [
@@ -103,6 +106,74 @@ var x_Axis_Labels = [
     "2018"
 ];
 
+var countries_Line = [
+    "Brunei Darussalam", //0
+    "Cambodia",
+    "China",
+    "India",//3
+    "Indonesia",
+    "Japan",
+    "Lao PDR",//6
+    "Malaysia",
+    "Myanmar",
+    "Philippines",//9
+    "Singapore",
+    "South Korea",
+    "Thailand",//12
+    "United States",
+    "Vietnam" // 14
+];
+
+
+function dynamic_Yaxis_Label_Signs(hbarSearchValue, number){
+    
+    if (hbarSearchValue.includes('%') === true){
+        console.log('Search contains PERCENTAGE % sign')
+        number_f = number.toLocaleString('en') + '%';
+        return number_f;
+
+    } else if (hbarSearchValue.includes('$') === true) {
+
+        console.log('Search contains DOLLAR $ sign')
+
+        if (number >= 1000000) {
+            number = number / 1000000;
+            number_f = number.toLocaleString('en') + ' ($MM)';
+            return number_f;
+
+        } else if (number >= 1000) {
+            number = number / 1000;
+            number_f = number.toLocaleString('en') + ' ($K)';
+            return number_f;
+
+        } else if (number >= 101) {
+            number_f = number.toLocaleString('en') + ' ($K)';
+            return number_f;
+
+        } else {
+            number_f = number.toLocaleString('en') + ' ($)';
+            return number_f;
+        }
+    } else {
+        console.log('Search contains NO SIGNS')
+
+        if (number >= 101) {
+            number_f = number.toLocaleString('en') + ' (K)';
+            return number_f;
+
+        } else {
+            
+            number_f = number.toLocaleString('en');
+            return number_f;
+        }
+    }
+};
+
+
+
+
+
+
 var lineChartData = {
     type: 'line',
     data:{
@@ -114,32 +185,105 @@ var lineChartData = {
         responsive: true,
         hoverMode: 'index',
         stacked: false,
-        title: {
-            display: true,
-            text: 'ASEAN ECONOMIC TRENDS BETWEEN 2000 and 2018'
-        },
-        options: {
             scales: {
-                yAxes: [{
-                    ticks: {
-                        // Include a dollar sign in the ticks
-                        callback: function(label, index, labels) {
-                            return label + '%';
+                yAxes: [
+                    { // Logic to format the xAxes 
+                        ticks: {
+                            beginAtZero: true,
+                            // callback: function(label, index, labels) {
+                            //     return label.toLocaleString('en');
+                            // }
+                            callback: function(label, index, labels) {
+                                console.log('LOOOK RIGHT HURRRRRRRRRRR')
+                                console.log(label); // label draws from top down. yxis "label"
+                                // console.log(index); // outputted nothing
+                                // console.log(labels); //outputted nothing
+
+                            //     // for this function, you will pass in filterby
+                            // function determineSign(hbarSearchValue, number){
+                                // var hbarSearchValue = filterby; // going to pass in filterby
+                                console.log('The current filter by is: ')
+                                // console.log(hbarSearchValue);
+                                //let number = label; // find out how to refer to the 'label' value you're targeting, and pass it.
+
+                                // if (hbarSearchValue.includes('%') === true){
+                                //     console.log('Search contains PERCENTAGE % sign')
+                                //     number_f = number.toLocaleString('en') + '%';
+                                //     return number_f;
+
+                                // } else if (hbarSearchValue.includes('$') === true) {
+
+                                //     console.log('Search contains DOLLAR $ sign')
+
+                                //     if (number >= 1000000) {
+                                //         number = number / 1000000;
+                                //         number_f = number.toLocaleString('en') + ' ($MM)';
+                                //         return number_f;
+            
+                                //     } else if (number >= 1000) {
+                                //         number = number / 1000;
+                                //         number_f = number.toLocaleString('en') + ' ($K)';
+                                //         return number_f;
+    
+                                //     } else if (number >= 101) {
+                                //         number_f = number.toLocaleString('en') + ' ($K)';
+                                //         return number_f;
+
+                                //     } else {
+                                //         number_f = number.toLocaleString('en') + ' ($)';
+                                //         return number_f;
+                                //     }
+                                // } else {
+                                //     console.log('Search contains NO SIGNS')
+
+                                //     if (number >= 101) {
+                                //         number_f = number.toLocaleString('en') + ' (K)';
+                                //         return number_f;
+    
+                                //     } else {
+                                        
+                                //         number_f = number.toLocaleString('en');
+                                //         return number_f;
+                                //     }
+                                // }
+
+                                dynamic_Yaxis_Label_Signs(filterby, label);
+                                return number_f;
+                                
+                            }
+                            
                         }
-                    },
-                    scaleLabel: {
-                        display: true,
                     }
-                }]
-            },tooltips: {
+                ]
+            }
+            ,tooltips: {
                 callbacks: {
                     label: function(tooltipItem, data) {
                         // Below is the logic that divides the numbers and formats the tool tip
-                        let label = '';
-                        let number_tt = tooltipItem.yLabel;
+                        // let label = data.label;
+                        console.log('HERE"S THE TOOL TIP DATA');
+                        console.log(data);
+                        console.log('HERE"S THE TOOL TIP ITEM');
+                        console.log(tooltipItem);
+                        let tt_line_label = '';
+                        let labelIndex = tooltipItem.datasetIndex;
+
                         
-                        number_f = number_tt.toLocaleString('en') + '%';
-                        return label += number_f
+                        // console.log('Here is the labelIndex which should be equal to tooltipItem');
+                        // console.log(labelIndex);
+
+                        var tt_countryName = countries_Line[labelIndex];
+                        let tt_pointer_value = Math.round(tooltipItem.value).toFixed(2);
+
+                        dynamic_Yaxis_Label_Signs(filterby, tt_pointer_value);
+                        // return number_f;
+
+                        tt_line_label += `${tt_countryName} - ${number_f}`;
+
+                        return tt_line_label;
+                        
+                            
+                        }
                     }
                 }
             },
@@ -148,9 +292,8 @@ var lineChartData = {
                 scheme: 'tableau.Classic20'
             }
             }
-        },
-    }
-};
+        
+    };
 
 
 getLineChartData();
@@ -161,6 +304,8 @@ function selectFilterbyLineCtx(value){
 
     d3.csv("js/data_csv/lineChart_trends_1995_2018_2.csv", function(error, data) {
     filterData = data.filter((row) => row["indicator_name"] === value);
+    
+    filterby = value;
 
     my_datasets = [];
     for(var i=0; i<filterData.length;i++){
@@ -189,31 +334,100 @@ function selectFilterbyLineCtx(value){
             parseFloat(newline["2016"]),
             parseFloat(newline["2017"]),
             parseFloat(newline["2018"])
-            ],
+            ], // heres where i made
             options: {
-                scales: {
-                    yAxes: [{
-                        ticks: {
-                            // Include a dollar sign in the ticks
-                            callback: function(value, index, values) {
-                                return value + '%';
-                            }
-                        },
-                        scaleLabel: {
-                            display: true,
-                        }
-                    }]
-                },tooltips: {
-                    callbacks: {
-                        label: function(tooltipItem, data) {
-                            // Below is the logic that divides the numbers and formats the tool tip
-                            let label = '';
-                            let number_tt = tooltipItem.yLabel;
+                // scales: {
+                //     yAxes: [
+                //         { // Logic to format the xAxes 
+                //             ticks: {
+                //                 beginAtZero: true,
+                //                 // callback: function(label, index, labels) {
+                //                 //     return label.toLocaleString('en');
+                //                 // }
+                //                 callback: function(label, index, labels) {
+                //                     console.log('LOOOK RIGHT HURRRRRRRRRRR')
+                //                     console.log(label);
+                //                     console.log(index);
+                //                     console.log(labels);
+                //                     var hbarSearchValue = filterby;
+                //                     let number = label;
+
+                //                     if (hbarSearchValue.includes('%') === true){
+                //                         console.log('Search contains percentage % sign')
+                //                         number_f = number.toLocaleString('en') + '%';
+                //                         return number_f;
+                //                     } else if (hbarSearchValue.includes('$') === true) {
+
+                //                         console.log('Search contains percentage $ sign')
+                //                         if (number >= 1000000) {
+                //                                 number = number / 1000000;
+                //                                     number_f = number.toLocaleString('en') + ' (MM)';
+                //                                 return number_f;
+                
+                //                             } else if (number >= 1000) {
+                //                                 number = number / 1000;
+                //                                 number_f = number.toLocaleString('en') + ' (K)';
+                //                                 return number_f;
+            
+                //                             } else if (number >= 101) {
+                //                                 number_f = number.toLocaleString('en') + ' (K)';
+                //                                 return number_f;
+
+                //                             } else {
+                //                                 number_f = number.toLocaleString('en');
+                //                                 return number_f;
+
+                //                             }
+                //                         } else {
+                //                             console.log('Search contains percentage $ sign')
+                //                             if (number >= 1000000) {
+                //                                 number = number / 1000000;
+                //                                 number_f = number.toLocaleString('en') + ' (MM)';
+                //                                 return number_f;
+            
+                //                             } else if (number >= 1000) {
+                //                                 number = number / 1000;
+                //                                 number_f = number.toLocaleString('en') + ' (K)';
+                //                                 return number_f;
+            
+                //                             } else if (number >= 101) {
+                //                                 number_f = number.toLocaleString('en') + ' (K)';
+                //                                 return number_f;
+            
+                //                             } else {
+                                                
+                //                                 number_f = number.toLocaleString('en');
+            
+                //                                 // if (number == 0.00 || number == 0 || number === 0 || number === 0.00 || number == '0' || number === '0.00') {
+                //                                 //     return number_f = number.toLocaleString('en');
+                //                                 // }
+                //                                 return number_f;
+                //                             }
+                //                         }
+                                    
+                //                 }
+                                    
+                //             }
+                //             ,scaleLabel: function (valuePayload) {
+                //                 return Number(valuePayload.value).toFixed(2).replace('.',',') + '$';}
+                //             ,
+                //             // scaleLabel: {
+                //             //     display: true,
+                //             // }
+                //         }
+                //     ]
+                // },
+                tooltips: {
+                    // callbacks: {
+                    //     label: function(tooltipItem, data) {
+                    //         // Below is the logic that divides the numbers and formats the tool tip
+                    //         let label = '';
+                    //         let number_tt = tooltipItem.yLabel;
                             
-                            number_f = number_tt.toLocaleString('en') + '%';
-                            return label += number_f
-                        }
-                    }
+                    //         number_f = number_tt.toLocaleString('en') + '%';
+                    //         return label += number_f
+                    //     }
+                    // }
                 },
                 plugins: {
                 colorschemes: {
@@ -226,6 +440,7 @@ function selectFilterbyLineCtx(value){
         }
     console.log(my_datasets);
     lineChartData.data.datasets = my_datasets;
+
     window.myLine.update();
 });
 };
@@ -233,8 +448,20 @@ function selectFilterbyLineCtx(value){
 
 
 
-
-
+// saving just in case need to go back and use it
+// scales: {
+//     yAxes: [{
+//         ticks: {
+//             // Include a dollar sign in the ticks
+//             callback: function(value, index, values) {
+//                 return value + '%';
+//             }
+//         },
+//         scaleLabel: {
+//             display: true,
+//         }
+//     }]
+// }
 
 
 

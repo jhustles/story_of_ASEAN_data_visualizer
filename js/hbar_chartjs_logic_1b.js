@@ -14,7 +14,7 @@ var horizontal_bar_chart_input = {
         },
         title: {
             display: true,
-            text: '2018 World Bank Data Visualization'
+            text: ' '
         },
         scales: {
             xAxes: [

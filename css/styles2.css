@@ -1,8 +1,24 @@
-.canvas {
+/* .canvas {
     -moz-user-select: none;
     -webkit-user-select: none;
     -ms-user-select: none;
-  }
+  } */
+
+#mapsection {
+
+
+  background-image: url("https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi.pinimg.com%2Foriginals%2F6c%2Fa7%2Fd5%2F6ca7d5a3a62f0e9dabd86c63dbb3e977.jpg&f=1&nofb=1");
+
+  /* Full height */
+  height: 100%;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}
+
 
   #mapid {
     /* clear: both; */
@@ -59,7 +75,9 @@
   height: 40px;
 } */
 
-
+#hBarIndicator_Selector, #lineCtxIndicator_Selector{
+  margin-bottom: 3%;
+}
 
 /*  */
   .vertical-text {
@@ -72,10 +90,18 @@
     height: 50%;
   }
 
+.box_around_chart{
+  /* margin: 1800px, 1100px, 1800px, 1100px ; */
+  background-color: white;
+
+}
+
   #chart1_Hbar {
 		-moz-user-select: none;
 		-webkit-user-select: none;
-		-ms-user-select: none;
+    -ms-user-select: none;
+    background-color: white;
+
   }
   
  #chart2_line {
@@ -90,3 +116,28 @@
    color: 'white';
  }
 
+
+
+
+ #about {
+
+
+  background-image: url("https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fimg04.deviantart.net%2Ff521%2Fi%2F2013%2F243%2Fb%2F5%2Fjourney_to_the_west_by_artoftu-d6kf2uy.jpg&f=1&nofb=1");
+
+  /* Full height */
+  height: 100%;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}
+
+/* #footer_custom {
+  background-color: #212529;
+  padding: 0;
+  text-align: center;
+  font-size: 0.9rem;
+  font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+} */

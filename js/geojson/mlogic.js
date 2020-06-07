@@ -14,7 +14,7 @@ var dark = L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?
     zoomOffset: -1,
     accessToken: "pk.eyJ1Ijoiamh1c3RsZXMiLCJhIjoiY2thb2ZiaGttMW5jZjJ0cDZoZmp6b242bCJ9.JjM5CMxGHdLAjdF8WcsF-A"
     // accessToken: API_KEY
-}).addTo(myMap);
+})//.addTo(myMap);
 
 var light = L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
     attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
@@ -40,7 +40,7 @@ var street = L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y
     zoomOffset: -1,
     accessToken: "pk.eyJ1Ijoiamh1c3RsZXMiLCJhIjoiY2thb2ZiaGttMW5jZjJ0cDZoZmp6b242bCJ9.JjM5CMxGHdLAjdF8WcsF-A"
     // accessToken: API_KEY
-});//.addTo(myMap);
+}).addTo(myMap);
 
 //// FLAG ICONS
 let aseanCountries = [];
@@ -82,7 +82,7 @@ for (i=0; i < countries.length; i++){
 
 };
 
-var flagIconLayer = L.layerGroup(aseanFlagIcons);
+var flagIconLayer = L.layerGroup(aseanFlagIcons).addTo(myMap);
 
 
 

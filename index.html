@@ -67,11 +67,11 @@
                         <!--  -->
                         <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">DashBoards</a>
                                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="#dashboardSection">Categories Analysis</a>
-                                <a class="dropdown-item" href="plot1-1.html">Tweets vs Average Followers</a>
-                                <a class="dropdown-item" href="plot2-2.html">Tweets vs Average Retweets</a>
+                                <a class="dropdown-item" href="#hbar_chart_section">2018 Economic Indicators</a>
+                                <a class="dropdown-item" href="#line_chart_section">Trends Over Time (2000 - 2018)</a>
+                                <!-- <a class="dropdown-item" href="plot2-2.html">Tweets vs Average Retweets</a>
                                 <a class="dropdown-item" href="plot3-3.html">Tweets vs Total Reviews</a>
-                                <a class="dropdown-item" href="plot4-4.html">Tweets vs Ratings</a>
+                                <a class="dropdown-item" href="plot4-4.html">Tweets vs Ratings</a> -->
                         </li>
 
                         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#portfolio">Insights</a></li>
@@ -93,7 +93,7 @@
         <section class="page-section" id="mission">
             <div class="container">
                 <div class="text-center">
-                    <h3 class="section-heading text-uppercase">ASSOCATION OF SOUTH EAST ASIAN NATIONS</h3>
+                    <h2 class="section-heading text-uppercase">ASSOCATION OF SOUTHEAST ASIAN NATIONS</h2>
                     
                     <br>
                     <!-- <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3> -->
@@ -205,15 +205,15 @@
 
         <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
         <!-- DASHBOARD SECTION -->
-        <section class="page-section bg-light" id="dashboardSection">
+        <section class="page-section bg-light" id="hbar_chart_section">
             <div class="container">
                 <div class="text-center">
-                    <h2 class="section-heading text-uppercase">DASHBOARDS</h2>
-                    <h3 class="section-subheading text-muted">Source: World Bank (data.worldbank.org/topic/economy-and-growth)</h3>
+                    <h2 id=dashboard_title class="section-heading text-uppercase">DASHBOARDS</h2>
+                    <!-- <h6 class="section-subheading text-muted"><i>Source: World Bank (data.worldbank.org/topic/economy-and-growth)</i></h6> -->
                 </div>
                     
                     <div class="text-center">
-
+                        <p><h5>ASEAN Member 2018 Totals</h5></p>
                           <!-- QuerySelector in JS and create a list of econ indicator names and create this dynamically in JS using DOM -->
                         <p><h6>Select an Economic Indicator Below:</h6></p>
                         <select id ="hBarIndicator_Selector" onchange="selectFilterbyHbar(this.value)">
@@ -233,12 +233,23 @@
 
 
                     </div>
+                    <div class="box_around_chart">
+                        <canvas id="chart1_Hbar" width="1600" height="900"></canvas>
+                    </div>
 
-                    <canvas id="chart1_Hbar"></canvas>
+        </section>
 
+        <section class="page-section" id="line_chart_section">
+            <div class="container">
+                <!-- <div class="text-center">
+                    <h2 id=dashboard_title class="section-heading text-uppercase">DASHBOARDS</h2>
+                    <h3 class="section-subheading text-muted">Source: World Bank (data.worldbank.org/topic/economy-and-growth)</h3>
+                </div> -->
 
                     <div class="text-center">
                         <!-- QuerySelector in JS and create a list of econ indicator names and create this dynamically in JS using DOM -->
+                        <!-- <p><h5>ASEAN Member Vs. Selected Allies</h5></p> -->
+                        <p><h5>ASEAN Economic Trends Vs. Selected Allies Between 2000 - 2018</h5></p>
                         <p><h6>Select an Economic Indicator Below:</h6></p>
                         <select id ="lineCtxIndicator_Selector" onchange="selectFilterbyLineCtx(this.value)"></select>
                         
@@ -246,7 +257,6 @@
 
                     <canvas id="chart2_line" width="1600" height="900"></canvas>
 
-                    <div id="test_line_data"></div>
 
             </div>
 <!-- 
@@ -365,7 +375,7 @@
         <!-- ABOUT THE CREATOR / FORMERLY TEAM-->
         <!-- #############################################-->
 
-        <section class="page-section" id="about">
+        <!-- <section class="page-section" id="about">
             
             <div class="container">
                 <div class="row">
@@ -380,17 +390,17 @@
                         <img class="mx-auto rounded-circle" src="assets/img/team/2.jpg" alt="" />
                       <h4>Johnny Giang</h4>
                       <p class="text-muted">Developer</p>
-                      <ul class="list-inline social-buttons">
+                      <ul class="list-inline social-buttons"> -->
                         <!-- <li class="list-inline-item">
                           <a href="#">
                             <i class="fab fa-twitter"></i>
                           </a>
                         </li> -->
-                        <li class="list-inline-item">
+                        <!-- <li class="list-inline-item">
                           <a href="https://www.linkedin.com/in/johnesongiang/">
                             <i class="fab fa-linkedin-in"></i>
                           </a>
-                        </li>
+                        </li> -->
                         <!-- <li class="list-inline-item">
                             <a href="#">
                               <i class="fab fa-facebook-f"></i>
@@ -438,7 +448,7 @@
             </div> -->
 
 
-        </section>
+        <!-- </section> -->
 
 
 
@@ -500,8 +510,8 @@
             </div>
         </section> -->
         <!-- Footer-->
-        <footer class="page-footer font-small blue pt-4">
-            <div class="footer-copyright text-center py-3 bg-light"><gl-emoji title="copyright sign" data-name="copyright" data-unicode-version="1.1">©</gl-emoji> 2020 Copyright:
+        <footer class="page-footer bg-dark font-small pt-4">
+            <div class="footer-copyright text-center py-3" style="color: white"><gl-emoji title="copyright sign" data-name="copyright" data-unicode-version="1.1" >©</gl-emoji> 2020 Copyright:
                 <a title="Designed By Johneson Giang" href="#" target="_blank"> Johneson Giang</a>
             </div>
         </footer>
@@ -698,8 +708,8 @@
 
         <script type="text/javascript" defer src="js/hbar_chartjs_logic_1.js"></script>
         <script type="text/javascript" defer src="js/hbar_chartjs_logic_1b.js"></script>
-
         <script type="text/javascript" defer src="js/line_chartjs_logic_2a.js"></script>
+
         <script type="text/javascript" defer src="js/line_chartjs_logic_2c.js"></script>
         <script type="text/javascript" defer src="js/line_chartjs_logic_2d.js"></script>
 
@@ -711,7 +721,7 @@
         <script type="text/javascript" src="js/geojson/aseanCountriesSummary.js"></script>
 
 
-          <!-- MapBox API Key -->
+        <!-- MapBox API Key -->
         <script type="text/javascript" src="js/config.js"></script>
         <!-- <script src="js/maplogic.js"></script> -->
         <script defer src="js/geojson/mlogic.js"></script>
