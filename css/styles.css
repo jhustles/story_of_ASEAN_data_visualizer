@@ -10,7 +10,13 @@
  * Copyright 2011-2019 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
-:root {
+
+ /* #mapid {
+  height: 100%;
+  width: 100vw;
+} */
+
+ :root {
   --blue: #007bff;
   --indigo: #6610f2;
   --purple: #6f42c1;
@@ -552,9 +558,17 @@ pre code {
   .container {
     max-width: 540px;
   }
+
+  #mapid {
+    max-width: 540px;
+  }
 }
 @media (min-width: 768px) {
   .container {
+    max-width: 720px;
+  }
+
+  #mapid {
     max-width: 720px;
   }
 }
@@ -562,9 +576,15 @@ pre code {
   .container {
     max-width: 960px;
   }
+  #mapid {
+    max-width: 960px;
+  }
 }
 @media (min-width: 1200px) {
   .container {
+    max-width: 1140px;
+  }
+  #mapid {
     max-width: 1140px;
   }
 }

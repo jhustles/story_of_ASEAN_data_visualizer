@@ -8,6 +8,7 @@ var horizontal_bar_chart_input = {
         }
         },
         responsive: true,
+        maintainAspectRatio: true,
         legend: {
             position: 'bottom',
             display: false

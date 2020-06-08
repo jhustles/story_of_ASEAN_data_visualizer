@@ -191,6 +191,7 @@ var lineChartData = {
     },
     options: {
         responsive: true,
+        maintainAspectRatio: true,
         hoverMode: 'index',
         stacked: false,
         legend: {
