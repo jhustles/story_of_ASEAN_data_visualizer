@@ -17,9 +17,6 @@
 
 }
 
-.timeline-body > p {
-
-}
 
 #mapsection {
 
@@ -36,21 +33,76 @@
 
 }
 
+#mapOuterBox{
+  height: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+
+#mapid {
+  /* clear: both; */
+  /* height: 100%; */
+  /* display: flex;
+  justify-content: flex-end; */
+  /* margin-left: 35%; */
+  /* height: 100%;
+  width: 100vw; */
+  height: 50vh;
+  width: 65vw;
+  /* margin-top: 5%; */
+  /* margin-right: 15%;
+  margin-bottom: 5%; */
+  /* margin-left: 15%; */
+} 
+
+@media (min-width: 576px) {
 
   #mapid {
-    /* clear: both; */
-    /* height: 100%; */
-    /* display: flex; */
-    /* justify-content: center; */
+    display: flex;
+    justify-content: center;
+    /* height: 100%;
+    width: 100vw; */
 
-
-    height: 500px;
-    width: 800px;
-    margin-top: 5%;
-    margin-right: 15%;
-    margin-bottom: 5%;
-    margin-left: 15%;
+    margin-right: 0%;
+    margin-left: 0%;
+    max-width: 540px;
+  }
 }
+@media (min-width: 768px) {
+
+  #mapid {
+    display: flex;
+    justify-content: center;
+
+    margin-right: 0%;
+    margin-left: 0%;
+    max-width: 720px;
+  }
+}
+@media (min-width: 992px) {
+
+  #mapid {
+    display: flex;
+    justify-content: center;
+
+    margin-right: 0%;
+    margin-left: 0%;
+    max-width: 960px;
+  }
+}
+@media (min-width: 1200px) {
+
+  #mapid {
+    display: flex;
+    justify-content: center;
+
+    /* margin-right: 15%; */
+    /* margin-left: 0%; */
+    max-width: 1140px;
+  }
+}
+
 
 
 .info {
@@ -92,11 +144,58 @@
   height: 40px;
 } */
 
-#hBarIndicator_Selector, #lineCtxIndicator_Selector{
-  margin-bottom: 3%;
-}
 
-/*  */
+/* #hBarIndicator_Selector, #lineCtxIndicator_Selector{
+  height: 100%;
+  width: 90%;
+  margin-bottom: 3%;
+} */
+
+@media (min-width: 576px) {
+
+  #hBarIndicator_Selector, #lineCtxIndicator_Selector {
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    width: 100vw;
+    /* margin-right: 25%; */
+    margin-bottom: 3%;
+    max-width: 540px;
+  }
+}
+@media (min-width: 768px) {
+
+  #hBarIndicator_Selector, #lineCtxIndicator_Selector {
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    width: 100vw;
+    margin-bottom: 3%;
+    max-width: 720px;
+  }
+}
+@media (min-width: 992px) {
+
+  #hBarIndicator_Selector, #lineCtxIndicator_Selector {
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    width: 100vw;
+    margin-bottom: 3%;
+    max-width: 960px;
+  }
+}
+@media (min-width: 1200px) {
+
+  #hBarIndicator_Selector, #lineCtxIndicator_Selector {
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    width: 100vw;
+    margin-bottom: 3%;
+    max-width: 1140px;
+  }
+}
   .vertical-text {
 	transform: rotate(90deg);
 	transform-origin: left top 0;
@@ -107,11 +206,6 @@
     height: 50%;
   }
 
-.box_around_chart{
-  /* margin: 1800px, 1100px, 1800px, 1100px ; */
-  background-color: white;
-
-}
 
   #chart1_Hbar {
 		-moz-user-select: none;

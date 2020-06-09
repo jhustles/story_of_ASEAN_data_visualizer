@@ -195,12 +195,15 @@
         </section>
 
         <!-- MAP SECTION -->
-        <section class="page-section" id="mapsection">
-            <div class="container">
-                <div class="text-center">
+        <section class="page-section text-center" id="mapsection">
+            <div class="container text-center">
+
                     <h2 class="section-heading text-uppercase">Map</h2>
-                </div>
+               
+            </div>
+            <div id=mapOuterBox>
                 <div id="mapid"></div>
+                </div>
         </section>
 
 
@@ -217,7 +220,7 @@
                         <p><h5>ASEAN Member 2018 Totals</h5></p>
                           <!-- QuerySelector in JS and create a list of econ indicator names and create this dynamically in JS using DOM -->
                         <p><h6>Select an Economic Indicator Below:</h6></p>
-                        <select id ="hBarIndicator_Selector" onchange="selectFilterbyHbar(this.value)">
+                        <select id ="hBarIndicator_Selector" class="text center" width= 50% onchange="selectFilterbyHbar(this.value)">
                             <!-- <option value="0">Avg. Death Rate, Crude (per 1K persons, Rounded)</option>
                             <option value="1">Avg. Fertility Rate, Total (Births per woman, Rounded)</option>
                             <option value='2'>Avg. Time Required To Start a Business (Days)</option>
@@ -234,11 +237,11 @@
 
 
                     </div>
-                    <div class="box_around_chart">
-                        <div class="bg-dark" width="2000" height="900">
-                        <canvas id="chart1_Hbar" class="bg-dark" width="1600" height="900"></canvas>
-                        </div>
-                    </div>
+
+
+                    <canvas id="chart1_Hbar" class="bg-dark" width="1600" height="900"></canvas>
+
+
 
         </section>
 
@@ -254,11 +257,11 @@
                         <!-- <p><h5>ASEAN Member Vs. Selected Allies</h5></p> -->
                         <p><h5>ASEAN Economic Trends Vs. Selected Allies (2000 - 2018)</h5></p>
                         <p><h6>Select an Economic Indicator Below:</h6></p>
-                        <select id ="lineCtxIndicator_Selector" onchange="selectFilterbyLineCtx(this.value)"></select>
+                        <select id ="lineCtxIndicator_Selector" class="text center" onchange="selectFilterbyLineCtx(this.value)"></select>
                         
                     </div>
 
-                    <canvas id="chart2_line" width="1600" height="900"></canvas>
+                    <canvas id="chart2_line" class="text-center" width="1600" height="900"></canvas>
 
 
             </div>
