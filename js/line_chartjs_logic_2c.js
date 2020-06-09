@@ -9,11 +9,11 @@ var filterby = 'Current Health Expenditure (% Of GDP)'; // this is meant to be a
 async function getLineChartData() {
     await d3.csv("js/data_csv/lineCtx_onload_1995_2018.csv", function(error, data) {
     if (error) throw error;
-    console.log(data.length);
-    console.log('HERE is the data');
-    console.log('++++++++++++++++++++++++++++++++');
-    console.log(data);
-    console.log('++++++++++++++++++++++++++++++++');
+    // console.log(data.length);
+    // console.log('HERE is the data');
+    // console.log('++++++++++++++++++++++++++++++++');
+    // console.log(data);
+    // console.log('++++++++++++++++++++++++++++++++');
 
     
     // filterData is a list of objects outputted by the arrrow function
@@ -56,12 +56,12 @@ async function getLineChartData() {
             options: {
                 scales: {
                     yAxes: [{
-                        ticks: {
-                            // Include a dollar sign in the ticks
-                            callback: function(value, index, values) {
-                                return value + '%';
-                            }
-                        },
+                        // ticks: {
+                        //     // Include a dollar sign in the ticks
+                        //     callback: function(value, index, values) {
+                        //         return value + '%';
+                        //     }
+                        // },
                         scaleLabel: {
                             display: true,
                         }
@@ -75,9 +75,9 @@ async function getLineChartData() {
             }
         });
         }
-    console.log("MY DATA SET for line chart");
-    console.log(my_datasets);
-    console.log('===============');
+    // console.log("MY DATA SET for line chart");
+    // console.log(my_datasets);
+    // console.log('===============');
     // console.log(xAxis_Years);
 });
     return filterby;
@@ -193,19 +193,38 @@ var lineChartData = {
         responsive: true,
         maintainAspectRatio: true,
         hoverMode: 'index',
-        stacked: false,
+        stacked: true,
+        scaleShowValues: true,
+        title: {
+            display: true,
+            text: "Note: Colored labels are to enable / disable each country's trend line."
+        },
         legend: {
             display: true,
             fontSize: 10,
             fontColor: '#fff'
         },
         scales: {
+            // display: true,
             xAxes: [{
+                autoSkip : false,
                 gridLines: {
-                    display: false ,
-                    color: "#FFF"
+                    // color: function (value, index, values){
+                    //     if(value === 0 || value == 0.000){
+                    //         console.log(value);
+                    //         return '#fff';
+                    //     } else {
+                    //             return '#000'
+                    //         }
+                    // }
+                    // color: "#FFF",
+                    display: false 
+                    
                 },
+                // display: auto,
                 ticks: {
+                    beginAtZero: true,
+                    suggestedMin: 0.00,
                     fontSize: 17,
                     maxRotation: 60,
                     minRotation: 60,
@@ -215,12 +234,14 @@ var lineChartData = {
             }],
             yAxes: [
                 { // Logic to format the xAxes 
+                    // display: auto,
                     gridLines: {
                         display: true ,
                         color: "#FFF"
                     },
                     ticks: {
                         beginAtZero: true,
+                        suggestedMin: 0.00,
                         fontSize: 17,
                         fontColor: '#fff',
                         padding: 4,
@@ -297,10 +318,12 @@ var lineChartData = {
                     label: function(tooltipItem, data) {
                         // Below is the logic that divides the numbers and formats the tool tip
                         // let label = data.label;
-                        console.log('HERE"S THE TOOL TIP DATA');
-                        console.log(data);
-                        console.log('HERE"S THE TOOL TIP ITEM');
-                        console.log(tooltipItem);
+
+                        // console.log('HERE"S THE TOOL TIP DATA');
+                        // console.log(data);
+                        // console.log('HERE"S THE TOOL TIP ITEM');
+                        // console.log(tooltipItem);
+
                         // let tt_line_label = '';
                         // let labelIndex = tooltipItem.datasetIndex;                        
                         // // console.log('Here is the labelIndex which should be equal to tooltipItem');
@@ -393,87 +416,7 @@ function selectFilterbyLineCtx(value){
             parseFloat(newline["2018"])
             ], // heres where i made
             options: {
-                // scales: {
-                //     yAxes: [
-                //         { // Logic to format the xAxes 
-                //             ticks: {
-                //                 beginAtZero: true,
-                //                 // callback: function(label, index, labels) {
-                //                 //     return label.toLocaleString('en');
-                //                 // }
-                //                 callback: function(label, index, labels) {
-                //                     console.log('LOOOK RIGHT HURRRRRRRRRRR')
-                //                     console.log(label);
-                //                     console.log(index);
-                //                     console.log(labels);
-                //                     var hbarSearchValue = filterby;
-                //                     let number = label;
 
-                //                     if (hbarSearchValue.includes('%') === true){
-                //                         console.log('Search contains percentage % sign')
-                //                         number_f = number.toLocaleString('en') + '%';
-                //                         return number_f;
-                //                     } else if (hbarSearchValue.includes('$') === true) {
-
-                //                         console.log('Search contains percentage $ sign')
-                //                         if (number >= 1000000) {
-                //                                 number = number / 1000000;
-                //                                     number_f = number.toLocaleString('en') + ' (MM)';
-                //                                 return number_f;
-                
-                //                             } else if (number >= 1000) {
-                //                                 number = number / 1000;
-                //                                 number_f = number.toLocaleString('en') + ' (K)';
-                //                                 return number_f;
-            
-                //                             } else if (number >= 101) {
-                //                                 number_f = number.toLocaleString('en') + ' (K)';
-                //                                 return number_f;
-
-                //                             } else {
-                //                                 number_f = number.toLocaleString('en');
-                //                                 return number_f;
-
-                //                             }
-                //                         } else {
-                //                             console.log('Search contains percentage $ sign')
-                //                             if (number >= 1000000) {
-                //                                 number = number / 1000000;
-                //                                 number_f = number.toLocaleString('en') + ' (MM)';
-                //                                 return number_f;
-            
-                //                             } else if (number >= 1000) {
-                //                                 number = number / 1000;
-                //                                 number_f = number.toLocaleString('en') + ' (K)';
-                //                                 return number_f;
-            
-                //                             } else if (number >= 101) {
-                //                                 number_f = number.toLocaleString('en') + ' (K)';
-                //                                 return number_f;
-            
-                //                             } else {
-                                                
-                //                                 number_f = number.toLocaleString('en');
-            
-                //                                 // if (number == 0.00 || number == 0 || number === 0 || number === 0.00 || number == '0' || number === '0.00') {
-                //                                 //     return number_f = number.toLocaleString('en');
-                //                                 // }
-                //                                 return number_f;
-                //                             }
-                //                         }
-                                    
-                //                 }
-                                    
-                //             }
-                //             ,scaleLabel: function (valuePayload) {
-                //                 return Number(valuePayload.value).toFixed(2).replace('.',',') + '$';}
-                //             ,
-                //             // scaleLabel: {
-                //             //     display: true,
-                //             // }
-                //         }
-                //     ]
-                // },
                 tooltips: {
                     // callbacks: {
                     //     label: function(tooltipItem, data) {
@@ -495,31 +438,9 @@ function selectFilterbyLineCtx(value){
             // yAxisID: 'y-axis-1'
         });
         }
-    console.log(my_datasets);
+    // console.log(my_datasets);
     lineChartData.data.datasets = my_datasets;
 
     window.myLine.update();
 });
 };
-
-
-
-
-// saving just in case need to go back and use it
-// scales: {
-//     yAxes: [{
-//         ticks: {
-//             // Include a dollar sign in the ticks
-//             callback: function(value, index, values) {
-//                 return value + '%';
-//             }
-//         },
-//         scaleLabel: {
-//             display: true,
-//         }
-//     }]
-// }
-
-
-
-

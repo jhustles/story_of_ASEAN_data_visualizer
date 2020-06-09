@@ -48,8 +48,8 @@
   /* margin-left: 35%; */
   /* height: 100%;
   width: 100vw; */
-  height: 50vh;
-  width: 65vw;
+  height: 60vh;
+  width: 60vw;
   /* margin-top: 5%; */
   /* margin-right: 15%;
   margin-bottom: 5%; */
@@ -61,11 +61,6 @@
   #mapid {
     display: flex;
     justify-content: center;
-    /* height: 100%;
-    width: 100vw; */
-
-    margin-right: 0%;
-    margin-left: 0%;
     max-width: 540px;
   }
 }
@@ -74,9 +69,6 @@
   #mapid {
     display: flex;
     justify-content: center;
-
-    margin-right: 0%;
-    margin-left: 0%;
     max-width: 720px;
   }
 }
@@ -85,9 +77,6 @@
   #mapid {
     display: flex;
     justify-content: center;
-
-    margin-right: 0%;
-    margin-left: 0%;
     max-width: 960px;
   }
 }
@@ -96,9 +85,6 @@
   #mapid {
     display: flex;
     justify-content: center;
-
-    /* margin-right: 15%; */
-    /* margin-left: 0%; */
     max-width: 1140px;
   }
 }

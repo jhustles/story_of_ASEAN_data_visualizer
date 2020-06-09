@@ -21,7 +21,7 @@ var horizontal_bar_chart_input = {
             xAxes: [
                 { // Logic to format the xAxes 
                     gridLines: {
-                        display: false ,
+                        display: true ,
                         color: "#FFF"
                       },
                     ticks: {
