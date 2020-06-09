@@ -2,8 +2,31 @@
 
 console.log('starting script 2c');
 
+// crazy vibrant colors
+// var customColors = [
+//     '#e0e0e0', // grey brewer - brunei
+//     '#fc8d62', //peach brewer - cambodia
+//     '#ffff99', // pastel yellow // china
+//     '#c26b51', // tableau brown - india
+//     '#f0027f', // vibrant magenta 1  - indonesia
+//     '#FABFD2', // PASTEL PINK / ROSE tableau - Japan
+//     '#fe9929', // color brewer Orange 1
+//     '#01EBF5', // vibrant teal // malaysia
+//     '#98df8a', //pastel green myanmar tableau
+//     '#0000ff', // newbvibrant blue office - philippines
+//     '#ffd92f', // brewer richer yellow - singapore
+//     '#d17df9', // purple tableau - south korea
+//     '#33F51E', // vibrant lime green 1 // KEEP - thailand
+//     '#aec7e8', // blue united states tableau
+//     '#FF120D', // Vibrant red 1 // keep - vietnam
+    
+// ];
 
+// tableau colors from color schemes
 var customColors = [
+
+
+    // using these colors
     '#e0e0e0', // grey brewer - brunei
     '#fc8d62', //peach brewer - cambodia
     '#ffff99', // pastel yellow // china
@@ -13,12 +36,12 @@ var customColors = [
     '#fe9929', // color brewer Orange 1
     '#01EBF5', // vibrant teal // malaysia
     '#98df8a', //pastel green myanmar tableau
-    '#0000ff', // newbvibrant blue office - philippines
+    '#1f77b4', // newbvibrant blue office - philippines D
     '#ffd92f', // brewer richer yellow - singapore
     '#d17df9', // purple tableau - south korea
-    '#33F51E', // vibrant lime green 1 // KEEP - thailand
+    '#2ca02c', // vibrant lime green 1 // KEEP - thailand
     '#aec7e8', // blue united states tableau
-    '#FF120D', // Vibrant red 1 // keep - vietnam
+    '#f02720', // Vibrant red 1 // keep - vietnam D
     
 ];
 
