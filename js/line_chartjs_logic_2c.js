@@ -197,7 +197,7 @@ var lineChartData = {
         scaleShowValues: true,
         title: {
             display: true,
-            text: "Note: Colored labels are to enable / disable each country's trend line."
+            text: "Note: Colored labels enable / disable each country's trend line."
         },
         legend: {
             display: true,
