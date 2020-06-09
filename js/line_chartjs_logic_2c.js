@@ -2,6 +2,121 @@
 
 console.log('starting script 2c');
 
+
+var customColors = [
+    '#e0e0e0', // grey brewer - brunei
+    '#fc8d62', //peach brewer - cambodia
+    '#ffff99', // pastel yellow // china
+    '#c26b51', // tableau brown - india
+    '#f0027f', // vibrant magenta 1  - indonesia
+    '#FABFD2', // PASTEL PINK / ROSE tableau - Japan
+    '#fe9929', // color brewer Orange 1
+    '#01EBF5', // vibrant teal // malaysia
+    '#98df8a', //pastel green myanmar tableau
+    '#0000ff', // newbvibrant blue office - philippines
+    '#ffd92f', // brewer richer yellow - singapore
+    '#d17df9', // purple tableau - south korea
+    '#33F51E', // vibrant lime green 1 // KEEP - thailand
+    '#aec7e8', // blue united states tableau
+    '#FF120D', // Vibrant red 1 // keep - vietnam
+    
+];
+
+var countries_Line = [
+    "Brunei Darussalam", //0
+    "Cambodia",
+    "China",
+    "India",//3
+    "Indonesia",
+    "Japan",
+    "Lao PDR",//6
+    "Malaysia",
+    "Myanmar",
+    "Philippines",//9
+    "Singapore",
+    "South Korea",
+    "Thailand",//12
+    "United States",
+    "Vietnam" // 14
+];
+
+
+
+async function dynamic_Yaxis_Label_Signs(hbarSearchValue, number){
+    
+    if (hbarSearchValue.includes('%') === true){
+        console.log('Search contains PERCENTAGE % sign')
+        number_f = number.toLocaleString('en') + '%';
+        return number_f;
+
+    } else if (hbarSearchValue.includes('$') === true) {
+
+        console.log('Search contains DOLLAR $ sign')
+
+        if (number >= 1000000) {
+            number = number / 1000000;
+            number_f = number.toLocaleString('en') + ' ($MM)';
+            return number_f;
+
+        } else if (number >= 1000) {
+            number = number / 1000;
+            number_f = number.toLocaleString('en') + ' ($K)';
+            return number_f;
+
+        } else if (number >= 101) {
+            number_f = number.toLocaleString('en') + ' ($K)';
+            return number_f;
+        
+        } else if (number >= 0) {
+            number_f = number.toLocaleString('en') + ' ($)';
+            return number_f;
+
+        } else if (number >= -101) {
+            number_f = number.toLocaleString('en') + ' ($)';
+            return number_f;
+
+        } else if (number >= -1000) {
+            number = number / 1000;
+            number_f = number.toLocaleString('en') + ' ($K)';
+            return number_f;
+        } else if (number >= -1000000){
+
+            number = number / 1000000;
+            number_f = number.toLocaleString('en') + ' ($MM)';
+            return number_f;
+
+        } else if (number <= -1000001){
+
+            number = number / 1000000;
+            number_f = number.toLocaleString('en') + ' ($MM)';
+            return number_f;
+        }
+        else {
+            number_f = number.toLocaleString('en') + ' ($)';
+            return number_f;
+        }
+
+    } else {
+        console.log('Search contains NO SIGNS')
+        if (number >= 1000000) {
+            number = number / 1000000;
+            number_f = number.toLocaleString('en') + ' (MM)';
+            return number_f;
+
+        } else if (number >= 10000) {
+            number = number / 1000;
+            number_f = number.toLocaleString('en') + ' (K)';
+            return number_f;
+
+        } else{
+            number_f = number.toLocaleString('en');
+            return number_f;
+        }
+    }
+};
+
+
+
 var my_datasets = [];
 
 var filterby = 'Current Health Expenditure (% Of GDP)'; // this is meant to be a global variable to be used in script.
@@ -21,6 +136,7 @@ async function getLineChartData() {
 // extract items from each object
     for(var i=0; i<filterData.length;i++){
         var newline = filterData[i];
+        var newColor =customColors[i];
 
         console.log(filterData[i]);
         
@@ -28,6 +144,10 @@ async function getLineChartData() {
             // push an object into a list
             {
             label: newline["country_name"],
+
+            borderColor: newColor, // this works
+            borderWidth: 3.5,
+            fill: false,
             data: [
             // this is equivalent to the below:
             // parseInt(filterData[i]["2000"]),
@@ -51,8 +171,7 @@ async function getLineChartData() {
             parseFloat(newline["2017"]),
             parseFloat(newline["2018"])
             ],
-            borderWidth: 2,
-            fill: false,
+            
             options: {
                 scales: {
                     yAxes: [{
@@ -67,11 +186,11 @@ async function getLineChartData() {
                         }
                     }]
                 },
-                plugins: {
-                colorschemes: {
-                    scheme: 'tableau.Classic20'
-                }
-                }
+                // plugins: {
+                // colorschemes: {
+                //     scheme: 'office.Excel16'
+                // }
+                // }
             }
         });
         }
@@ -106,76 +225,6 @@ var x_Axis_Labels = [
     "2018"
 ];
 
-// this is used to return the name of the country for the tool tips
-var countries_Line = [
-    "Brunei Darussalam", //0
-    "Cambodia",
-    "China",
-    "India",//3
-    "Indonesia",
-    "Japan",
-    "Lao PDR",//6
-    "Malaysia",
-    "Myanmar",
-    "Philippines",//9
-    "Singapore",
-    "South Korea",
-    "Thailand",//12
-    "United States",
-    "Vietnam" // 14
-];
-
-
-function dynamic_Yaxis_Label_Signs(hbarSearchValue, number){
-    
-    if (hbarSearchValue.includes('%') === true){
-        console.log('Search contains PERCENTAGE % sign')
-        number_f = number.toLocaleString('en') + '%';
-        return number_f;
-
-    } else if (hbarSearchValue.includes('$') === true) {
-
-        console.log('Search contains DOLLAR $ sign')
-
-        if (number >= 1000000) {
-            number = number / 1000000;
-            number_f = number.toLocaleString('en') + ' ($MM)';
-            return number_f;
-
-        } else if (number >= 1000) {
-            number = number / 1000;
-            number_f = number.toLocaleString('en') + ' ($K)';
-            return number_f;
-
-        } else if (number >= 101) {
-            number_f = number.toLocaleString('en') + ' ($K)';
-            return number_f;
-
-        } else {
-            number_f = number.toLocaleString('en') + ' ($)';
-            return number_f;
-        }
-    } else {
-        console.log('Search contains NO SIGNS')
-        if (number >= 1000000) {
-            number = number / 1000000;
-            number_f = number.toLocaleString('en') + ' (MM)';
-            return number_f;
-
-        } else if (number >= 10000) {
-            number = number / 1000;
-            number_f = number.toLocaleString('en') + ' (K)';
-            return number_f;
-
-        } else{
-            number_f = number.toLocaleString('en');
-            return number_f;
-        }
-    }
-};
-
-
-
 
 Chart.defaults.global.defaultFontSize = 15; // adjusts the fonts for the color tags of the country labels
 Chart.defaults.global.defaultFontColor = "#fff";
@@ -195,6 +244,12 @@ var lineChartData = {
         hoverMode: 'index',
         stacked: true,
         scaleShowValues: true,
+        elements: { // belong under options
+                    point:{
+                        pointStyle: 'triangle',
+                        radius: 3,
+                        hoverRadius: 10,
+                        }},
         title: {
             display: true,
             text: "Note: Colored labels enable / disable each country's trend line."
@@ -312,9 +367,20 @@ var lineChartData = {
             ],
             
         }
-            ,tooltips: {
+            ,tooltips: { // must keep here for tooltips to work
                 callbacks: {
-                    mode: 'single',
+                    // mode: 'single',
+                    labelColor: function(tooltipItem, data) {
+                        let labelIndex = tooltipItem.datasetIndex;                        
+                        // console.log('Here is the labelIndex which should be equal to tooltipItem');
+                        // console.log(labelIndex); // pull the country name using the index from the list of countries
+
+                        var tt_labelColor = customColors[labelIndex];
+                        return {
+                            backgroundColor: tt_labelColor,
+                            borderColor: tt_labelColor
+                        };
+                    },
                     label: function(tooltipItem, data) {
                         // Below is the logic that divides the numbers and formats the tool tip
                         // let label = data.label;
@@ -367,11 +433,11 @@ var lineChartData = {
                     }
                 }
             },
-            plugins: {
-            colorschemes: {
-                scheme: 'tableau.Classic20'
-            }
-            }
+            // plugins: {
+            // colorschemes: {
+            //     scheme: 'tableau.Classic20'
+            // }
+            // }
         
     };
 
@@ -381,6 +447,7 @@ getLineChartData();
 
 
 function selectFilterbyLineCtx(value){
+    
 
     d3.csv("js/data_csv/lineChart_trends_1995_2018_2.csv", function(error, data) {
     filterData = data.filter((row) => row["indicator_name"] === value);
@@ -389,10 +456,13 @@ function selectFilterbyLineCtx(value){
 
     my_datasets = [];
     for(var i=0; i<filterData.length;i++){
+        var newColor =customColors[i];
         var newline = filterData[i];
         // var this_id  = 'y-axis-1';
         my_datasets.push({
             label: newline["country_name"],
+            borderColor: newColor,
+            borderWidth: 3,
             fill: false,
             data: [
             parseFloat(newline["2000"]),
@@ -416,26 +486,14 @@ function selectFilterbyLineCtx(value){
             parseFloat(newline["2018"])
             ], // heres where i made
             options: {
-
-                tooltips: {
-                    // callbacks: {
-                    //     label: function(tooltipItem, data) {
-                    //         // Below is the logic that divides the numbers and formats the tool tip
-                    //         let label = '';
-                    //         let number_tt = tooltipItem.yLabel;
-                            
-                    //         number_f = number_tt.toLocaleString('en') + '%';
-                    //         return label += number_f
-                    //     }
-                    // }
-                },
-                plugins: {
-                colorschemes: {
-                    scheme: 'tableau.Classic20'
-                }
-                }
+                elements: { // belong under options
+                    point:{
+                        pointStyle: 'triangle',
+                        radius: 3,
+                        hoverRadius: 10,
+                        }}
             }
-            // yAxisID: 'y-axis-1'
+
         });
         }
     // console.log(my_datasets);
