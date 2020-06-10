@@ -100,7 +100,7 @@
                     <div class="col-lg-12">
                         <!-- <h4 class="my-3">Economic Growth</h4> -->
 
-                        <p class="text-lg-center">The purpose of this project is to provide a colorful and insightful view into Southeast Asia's most recent  <a href="https://data.worldbank.org/">World Bank Data</a>. My website is not affiliated with the actual <a href="www.asean.org">Association of Southeast Asian Nations</a>, nor do I claim to be. If you'd like to learn more about their organization, impact, or even reach out to them, please visit their official websit in the link above. Otherwise, kindly scroll down the page to the next section or click these to view: <a class="js-scroll-trigger" href="#mapsection">Map</a>, <a class="js-scroll-trigger" href="#hbar_chart_section">Dashboard A - 2018 Economic Inidcator Totals</a>, <a class="js-scroll-trigger" href="#line_chart_section">Dashboard B - 2000 - 2018 Economic Trends</a>, <a class="js-scroll-trigger" href="#portfolio">Insights</a>, <a class="js-scroll-trigger" href="#missionp">Mission</a>, or <a class="js-scroll-trigger" href="#timeline">Historical Timeline</a>. </p>
+                        <p class="text-lg-center">The purpose of this project is to provide a colorful and insightful view into Southeast Asia's most recent  <a href="https://data.worldbank.org/">World Bank Data</a>. My website is not affiliated with the actual <a href="www.asean.org">Association of Southeast Asian Nations</a>, nor do I claim to be. If you'd like to learn more about their organization, impact, or even reach out to them, please visit their official websit in the link above. Otherwise, kindly scroll down to the next section or click these to view: <a class="js-scroll-trigger" href="#mapsection">Map</a>, <a class="js-scroll-trigger" href="#hbar_chart_section">Dashboard A - 2018 Economic Inidcator Totals</a>, <a class="js-scroll-trigger" href="#line_chart_section">Dashboard B - 2000 - 2018 Economic Trends</a>, <a class="js-scroll-trigger" href="#portfolio">Insights</a>, <a class="js-scroll-trigger" href="#missionp">Mission</a>, or <a class="js-scroll-trigger" href="#timeline">Historical Timeline</a>. </p>
 
                         <p class="text-lg-center">This project is inspired by my love for and recent travels to Southeast Asia, particularly Vietnam and Thailand. I am still working my way through the other eight countries...😅</p>
 
@@ -505,7 +505,27 @@
                     <h3 class="section-subheading text-white">Thank you for viewing!😄</h3>
                 </div>
                 <br>
-                <form id="contact" name="contact" method="POST" data-netlify="true" novalidate="novalidate">
+                <form name="contact" method="POST" data-netlify="true">
+                    <p>
+                      <label>Your Name: <input type="text" name="name" /></label>   
+                    </p>
+                    <p>
+                      <label>Your Email: <input type="email" name="email" /></label>
+                    </p>
+                    <p>
+                      <label>Your Role: <select name="role[]" multiple>
+                        <option value="leader">Leader</option>
+                        <option value="follower">Follower</option>
+                      </select></label>
+                    </p>
+                    <p>
+                      <label>Message: <textarea name="message"></textarea></label>
+                    </p>
+                    <p>
+                      <button type="submit">Send</button>
+                    </p>
+                  </form>
+                <!-- <form id="contact" name="contact" method="POST" data-netlify="true" novalidate="novalidate">
                     <div class="row align-items-stretch mb-5">
                         <div class="col-md-6">
                             <div class="form-group">
@@ -532,7 +552,7 @@
                         <div id="success"></div>
                         <button class="btn btn-primary btn-xl text-uppercase" id="sendMessageButton" type="submit">Send Message</button>
                     </div>
-                </form>
+                </form> -->
             </div>
         </section>
         <!-- Footer-->
@@ -726,7 +746,7 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
         <!-- Contact form JS-->
         <script src="assets/mail/jqBootstrapValidation.js"></script>
-        <script src="assets/mail/contact_me.js"></script>
+        <!-- <script src="assets/mail/contact_me.js"></script> -->
         <!-- Core theme JS-->
         <script src="js/scripts.js"></script>
 
