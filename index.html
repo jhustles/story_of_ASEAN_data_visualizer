@@ -501,50 +501,74 @@
             <div class="container">
                 <div class="text-center">
                     <h2 class="section-heading text-uppercase">Contact Me 📧</h2>
-                    <h3 class="section-subheading text-white">If you'd like to leave feedback or even contact me, please fill out the form below, and send it my way. </h3>
-                    <h3 class="section-subheading text-white">Thank you for viewing!😄</h3>
+                    <h3 class="section-subheading text-white">If you'd like to leave feedback or contact me regarding opportunities, please fill out the form below, and send it my way. </h3>
+                    <h3 class="section-subheading text-white">Thank you for viewing!🙏❤️️😄</h3>
                 </div>
                 <br>
-                <form name="contact" method="POST" data-netlify="true">
-                    <p>
-                      <label>Your Name: <input type="text" name="name" /></label>   
-                    </p>
-                    <p>
-                      <label>Your Email: <input type="email" name="email" /></label>
-                    </p>
-                    <p>
-                      <label>Your Role: <select name="role[]" multiple>
-                        <option value="leader">Leader</option>
-                        <option value="follower">Follower</option>
-                      </select></label>
-                    </p>
-                    <p>
-                      <label>Message: <textarea name="message"></textarea></label>
-                    </p>
-                    <p>
-                      <button type="submit">Send</button>
-                    </p>
-                  </form>
-                <!-- <form id="contact" name="contact" method="POST" data-netlify="true" novalidate="novalidate">
+                <!-- <div class="container">
+                    <form name="contact" method="POST" data-netlify="true">
+                        <div class="contactFlex1">
+                            <p>
+                            <label>Your Name: <input type="text" name="name" /></label>   
+                            </p>
+                            <p>
+                            <label>Your Email: <input type="email" name="email" /></label>
+                            </p>
+                            <p>
+                            <label>Role: <select name="role[]" multiple required="required">
+                                <option value="Recruiter">Recruiter</option>
+                                <option value="">Viewer</option>
+                            </select></label>
+                            </p>
+                        </div>
+
+                        <div class="contactFlex2">
+                        <p>
+                        <label>Message: <textarea name="message"></textarea></label>
+                        </p>
+                        <p>
+
+                        </div>
+                        <button type="submit">Send</button>
+                        </p>
+                    </form>
+                </div> -->
+
+
+                <form id="contact" name="contact" method="POST" data-netlify="true" novalidate="novalidate">
+                    <form name="contact" method="POST" data-netlify="true">
                     <div class="row align-items-stretch mb-5">
-                        <div class="col-md-6">
+                        <div class="col-md-6 text-right">
                             <div class="form-group">
-                                <label>name <input class="form-control" id="name" type="text" placeholder="Your Name *" required="required" data-validation-required-message="Please enter your name." /></label>
-                                <p class="help-block text-danger"></p>
+                                <p>
+                                    <label class="text-white">Full Name: <input type="text" name="name" required="required" /></label>   
+                                </p>
                             </div>
+
                             <div class="form-group">
-                                <label>email <input class="form-control" id="email" type="email" placeholder="Your Email *" required="required" data-validation-required-message="Please enter your email address." /></label>
-                                <p class="help-block text-danger"></p>
+                                <p>
+                                    <label class="text-white">Company / Organization: <input type="tel" name="tel" required="required"/></label>
+                                </p>
                             </div>
-                            <div class="form-group mb-md-0">
-                                <label>phone_number <input class="form-control" id="phone" type="tel" placeholder="Your Phone *" required="required" data-validation-required-message="Please enter your phone number." /></label>
-                                <p class="help-block text-danger"></p>
+
+                            <div class="form-group">
+                                <p>
+                                    <label class="text-white">Contact Email: <input type="email" name="email" required="required"/></label>
+                                </p>
                             </div>
+
+                            <div class="form-group">
+                                <p>
+                                    <label class="text-white">Phone Number: <input type="tel" name="tel" /></label>
+                                </p>
+                            </div>
+                            
                         </div>
                         <div class="col-md-6">
-                            <div class="form-group form-group-textarea mb-md-0">
-                                <label>message <textarea class="form-control" height=3rem id="message" placeholder="Your Message *" required="required" data-validation-required-message="Please enter a message."></textarea></label>
-                                <p class="help-block text-danger"></p>
+                            <div class="form-group form-group-JG form-group-textarea mb-md-0">
+                                <p>
+                                    <label class="text-white">Message: <textarea name="message" required="required"></textarea></label>
+                                </p>
                             </div>
                         </div>
                     </div>
@@ -552,7 +576,7 @@
                         <div id="success"></div>
                         <button class="btn btn-primary btn-xl text-uppercase" id="sendMessageButton" type="submit">Send Message</button>
                     </div>
-                </form> -->
+                </form>
             </div>
         </section>
         <!-- Footer-->
