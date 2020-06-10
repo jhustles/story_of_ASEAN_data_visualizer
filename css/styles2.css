@@ -230,8 +230,9 @@
 }
  #about {
 
-
-  background-image: url("https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fimg04.deviantart.net%2Ff521%2Fi%2F2013%2F243%2Fb%2F5%2Fjourney_to_the_west_by_artoftu-d6kf2uy.jpg&f=1&nofb=1");
+  background-color: #fafafa; 
+  /* background-color: #1c2331 ; */
+  /* background-image: url("https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fimg04.deviantart.net%2Ff521%2Fi%2F2013%2F243%2Fb%2F5%2Fjourney_to_the_west_by_artoftu-d6kf2uy.jpg&f=1&nofb=1"); */
   /* Full height */
   height: 100%;
 

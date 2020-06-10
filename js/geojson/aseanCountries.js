@@ -635,7 +635,7 @@ var aseanData =
 		"properties":
 		{
             "name": "Cambodia",
-            population: 16005373,
+            population: 16249798,
             land_sq_km: 176520,
             "density": 5.851,
             color: "orange",
@@ -3777,8 +3777,8 @@ var aseanData =
 		"id": "3",
 		"properties":
 		{
-            "name": "indonesia",
-            population: 263991379,
+            "name": "Indonesia",
+            population: 267663435,
             land_sq_km: 1811570,
             "density": Math.round(263991379/1811570),
             color: "rgb(223, 79, 255)",
@@ -67225,7 +67225,7 @@ var aseanData =
 		"properties":
 		{
             "name": "Lao PDR",
-            population: 6858160,
+            population: 76157,
             land_sq_km: 230800,
             "density": Math.round(6858160/230800),
             color: 'red',
@@ -71942,7 +71942,7 @@ var aseanData =
 		"properties":
 		{
             "name": "Malaysia",
-            population: 31624264,
+            population: 31528585,
             land_sq_km: 328550,
 			"density": Math.round(31624264/328550)
 		},
@@ -80180,7 +80180,7 @@ var aseanData =
 		"properties":
 		{
 			"name": "Myanmar",
-			population: 54409800,
+			population: 5378395,
 			land_sq_km: 676578,
 			"density": Math.round(54409800/676578),
 			color: "rgb(41, 199, 184)",
@@ -92963,7 +92963,7 @@ var aseanData =
 		"properties":
 		{
 			"name": "Philippines",
-			population: 104918090,
+			population: 16651922,
 			land_sq_km: 298170,
 			"density": Math.round(104918090/298170),
 			color: "blue",
@@ -111848,7 +111848,7 @@ var aseanData =
 		"properties":
 		{
 			"name": "Singapore",
-			population: 5612253,
+			population: 5638676,
 			land_sq_km: 709,
 			"density": Math.round(5612253/709),
 			color: "red",
@@ -111886,7 +111886,7 @@ var aseanData =
 		"properties":
 		{
 			"name": "Thailand",
-			population: 69037513,
+			population: 69428524,
 			land_sq_km: 510890,
 			"density": Math.round(69037513/510890),
 			color: "rgb(111, 235, 74)",
@@ -121220,7 +121220,7 @@ var aseanData =
 		"properties":
 		{
 			"name": "Vietnam",
-			population: 95540800,
+			population: 9554395,
 			land_sq_km: 310070,
 			"density": Math.round(95540800/310070),
 			color: "yellow",
